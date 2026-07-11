@@ -1,0 +1,122 @@
+/* GitHubCommits.css */
+
+.commits-section {
+  /* Apply global vertical padding for consistent rhythm across sections */
+  padding: var(--section-vertical-padding) 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  /* Keep background consistent with the root page color; use a subtle
+     top divider to separate sections without adding a background block. */
+  background: none;
+  border-top: 1px solid rgba(255,255,255,0.02);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.01);
+}
+
+.commits-header {
+  text-align: center;
+  margin-bottom: var(--section-gap);
+}
+
+.commits-header h2 {
+  font-size: 2rem;
+  margin-bottom: calc(var(--section-gap) / 2);
+  color: #ffffff;
+}
+
+/* Alternate subtle background to separate sections visually */
+/* NOTE: background-color removed to keep a consistent main background */
+
+.commits-header p {
+  color: #8b949e;
+  margin-bottom: 16px;
+}
+
+.github-profile-btn {
+  display: inline-block;
+  background: #58a6ff;
+  color: #0f1117;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+  transition: transform var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, background-color var(--layout-transition) ease-in-out;
+}
+
+.github-profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(88, 166, 255, 0.25);
+  background-color: #79c0ff;
+}
+
+.commits-loading {
+  text-align: center;
+  color: #8b949e;
+  padding: 20px;
+}
+
+.commits-error {
+  text-align: center;
+  color: #f85149;
+  padding: 20px;
+  background-color: rgba(248, 81, 73, 0.1);
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.commits-empty {
+  text-align: center;
+  color: #8b949e;
+  padding: 20px;
+}
+
+.commits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commit-item {
+  background-color: #161b22;
+  border-radius: 6px;
+  padding: 16px;
+  border: 1px solid #30363d;
+  /* Safe transitions for Module III layout changes */
+  transition: background-color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
+}
+
+.commit-item:hover {
+  background-color: #0f1117;
+  border-color: #58a6ff;
+}
+
+.commit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.commit-repo {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+  display: inline-block;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+}
+
+.commit-date {
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+.commit-message {
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0;
+  word-break: break-word;
+}

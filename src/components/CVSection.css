@@ -1,0 +1,176 @@
+.cv-section {
+  /* Use the global section padding for consistent vertical rhythm. */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--section-vertical-padding) 20px;
+  /* Subtle top divider instead of a full background block to keep the
+     page unified while preserving separation between sections. */
+  border-top: 1px solid rgba(255,255,255,0.02);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.01);
+}
+
+.cv-header {
+  text-align: center;
+  /* Increase spacing below section header for clearer separation */
+  margin-bottom: var(--section-gap);
+}
+
+.cv-header h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: calc(var(--section-gap) / 2);
+}
+
+.cv-header p {
+  color: #8b949e;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: calc(var(--section-gap) / 2);
+}
+
+.achievement-card {
+  width: 100%;
+  max-width: 520px;
+  min-height: 220px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  padding: 28px;
+  cursor: pointer;
+  /* Safe transitions for Module III layout switches */
+  transition: background-color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, border-radius var(--layout-transition) ease-in-out, padding var(--layout-transition) ease-in-out;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  border-color: #58a6ff;
+}
+
+.achievement-category {
+  color: #58a6ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.achievement-card h3,
+.achievement-modal h3 {
+  color: #ffffff;
+  margin: 12px 0;
+}
+
+.achievement-card p,
+.achievement-modal p {
+  color: #8b949e;
+  line-height: 1.6;
+}
+
+.achievement-card small,
+.achievement-modal small {
+  color: #c9d1d9;
+}
+
+.carousel-button {
+  background-color: #161b22;
+  color: #ffffff;
+  border: 1px solid #30363d;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, color var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
+}
+
+.carousel-button:hover {
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background-color: #30363d;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: #58a6ff;
+}
+
+.cv-download-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background-color: #58a6ff;
+  color: #0f1117;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(1, 4, 9, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.achievement-modal {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  padding: 28px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #8b949e;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .carousel-container {
+    gap: 10px;
+  }
+
+  .carousel-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+  }
+
+  .achievement-card {
+    padding: 22px;
+  }
+}
