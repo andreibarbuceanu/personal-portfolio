@@ -54,14 +54,22 @@ Before deploying, create the GitHub repository named `personal-portfolio`, push 
 
 ## Screenshots
 
-- Home page: `screenshots/home.png`
-- Projects section: `screenshots/projects.png`
-- CV and achievements: `screenshots/cv-achievements.png`
-- Alternate layout: `screenshots/alternate-layout.png`
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Projects Section
+![Projects Section](screenshots/projects.png)
+
+### CV and Achievements
+![CV and Achievements](screenshots/cv-achievements.png)
+
+### Alternate Layout
+![Alternate Layout](screenshots/alternate-layout.png)
+
 
 ## Live Demo
 
-Coming soon.
+[View the live portfolio](https://andreibarbuceanu.github.io/personal-portfolio/)
 
 ## Limitations
 
@@ -71,7 +79,6 @@ Coming soon.
 ## Future Improvements
 
 - Add verified public links for remaining projects.
-- Add real screenshots and a live-demo link.
 
 ## Author
 
