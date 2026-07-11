@@ -42,16 +42,6 @@ npm run build
 npm run preview
 ```
 
-## GitHub Pages Deployment
-
-The Vite base path is configured for the `personal-portfolio` repository.
-
-```bash
-npm run deploy
-```
-
-Before deploying, create the GitHub repository named `personal-portfolio`, push the project, then enable GitHub Pages from the `gh-pages` branch in the repository settings.
-
 ## Screenshots
 
 ### Home Page
