@@ -9,7 +9,6 @@ A responsive personal portfolio for Alin-Andrei Bărbuceanu, presenting projects
 - CV download and achievements carousel
 - GitHub activity integration
 - Multiple selectable layouts with localStorage persistence
-- AI-assisted development
 
 ## Technology Stack
 
@@ -42,6 +41,13 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+The portfolio is deployed with GitHub Pages.
+
+```bash
+npm run deploy
+
 ## Screenshots
 
 ### Home Page
@@ -57,7 +63,7 @@ npm run preview
 ![Alternate Layout](screenshots/alternate-layout.png)
 
 
-## Live Demo
+## Live version
 
 [View the live portfolio](https://andreibarbuceanu.github.io/personal-portfolio/)
 
