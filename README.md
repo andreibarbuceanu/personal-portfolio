@@ -47,6 +47,7 @@ The portfolio is deployed with GitHub Pages.
 
 ```bash
 npm run deploy
+```
 
 ## Screenshots
 
