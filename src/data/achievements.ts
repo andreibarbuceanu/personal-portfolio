@@ -8,87 +8,74 @@ export interface Achievement {
 }
 
 export const achievements: Achievement[] = [
-    {
+  {
     id: 1,
     title: "Cambridge English C1 Certification",
     shortDescription:
-      "Achieved Cambridge English qualification at C1 level.",
+      "Earned a Cambridge English qualification at CEFR Level C1.",
     fullDescription:
-      "Successfully passed the Cambridge English examination with Grade A, demonstrating advanced English communication skills at CEFR Level C1. Strong performance was achieved across reading, listening, speaking and use of English.",
+      "Successfully completed the Cambridge English examination, demonstrating advanced communication skills in reading, writing, listening and speaking at CEFR Level C1.",
     year: "2023",
     category: "Languages",
   },
-
   {
     id: 2,
-    title: "Web Programming 101 Graduate",
+    title: "Web Programming 101",
     shortDescription:
-      "Completed a web development course focused on modern frontend technologies.",
+      "Completed a practical course covering frontend web development fundamentals.",
     fullDescription:
-      "Successfully completed the Web Programming 101 course, gaining practical experience with HTML, CSS, JavaScript, DOM manipulation, animations and network requests used in modern web applications.",
+      "Completed the Web Programming 101 course through Cisco Networking Academy, gaining practical experience with HTML, CSS, JavaScript, DOM manipulation, browser storage and network requests.",
     year: "2025",
     category: "Web Development",
   },
-
   {
     id: 3,
+    title: "Web Programming 102",
+    shortDescription:
+      "Expanded my knowledge of modern web application development.",
+    fullDescription:
+      "Completed the Web Programming 102 course through Cisco Networking Academy, strengthening my understanding of JavaScript, application structure, interactive interfaces and modern web development practices.",
+    year: "2026",
+    category: "Web Development",
+  },
+  {
+    id: 4,
     title: "IC3 Global Standard 5 Certification",
     shortDescription:
-      "Earned internationally recognized digital literacy certification.",
+      "Earned an internationally recognized digital literacy certification.",
     fullDescription:
-      "Completed the IC3 Global Standard 5 certification pathway, covering computing fundamentals, productivity applications, online communication, cybersecurity awareness and digital literacy skills.",
+      "Completed the IC3 Global Standard 5 certification, covering computing fundamentals, productivity applications, online communication, cybersecurity awareness and essential digital skills.",
     year: "2023",
     category: "Certification",
   },
-
-  {
-    id: 4,
-    title: "Web Development Portfolio",
-    shortDescription:
-      "Built a personal portfolio using React, TypeScript and CSS.",
-    fullDescription:
-      "I created a personal portfolio website to present my projects, technical skills and GitHub activity. The application uses React, TypeScript, reusable components, GitHub API integration, a CV section and responsive design.",
-    year: "2026",
-    category: "Web Development",
-  },
   {
     id: 5,
-    title: "Full-Stack Development",
+    title: "VOIS Summer School",
     shortDescription:
-      "Developed an auto service orders management platform.",
+      "Participated in hands-on sessions covering software development and emerging technologies.",
     fullDescription:
-      "I built a full-stack web application for managing repair orders in an auto service. The project includes a modern React and TypeScript frontend, Tailwind CSS styling, a Node.js and Express backend, and a SQLite database.",
+      "Participated in the VOIS Summer School, attending practical sessions on Python, frontend development, cloud computing, DevOps, quality assurance, artificial intelligence, cybersecurity, Agile practices and software architecture.",
     year: "2026",
-    category: "Full-Stack Development",
+    category: "Training",
   },
   {
     id: 6,
-    title: "Embedded Systems Experience",
+    title: "Database and SQL Coursework",
     shortDescription:
-      "Created hardware-based projects using ESP32 and OLED displays.",
+      "Studied relational databases and developed a full-stack MySQL application.",
     fullDescription:
-      "I worked on embedded systems projects using ESP32 boards, physical buttons and OLED displays. One example is a Blackjack game where I implemented the game logic, user interaction and visual output directly on the microcontroller.",
-    year: "2025",
-    category: "Embedded Systems",
+      "Completed university coursework focused on relational database design, SQL queries, primary and foreign keys, joins, aggregation and CRUD operations using MySQL. Applied these concepts in an automotive service management application.",
+    year: "2026",
+    category: "Databases",
   },
   {
     id: 7,
-    title: "Python Application Development",
+    title: "Electronics and Telecommunications Engineering",
     shortDescription:
-      "Built a desktop QR code scanner and generator.",
+      "Pursuing a bachelor's degree at POLITEHNICA Bucharest.",
     fullDescription:
-      "I developed a Python desktop application with a Tkinter interface for generating QR codes and scanning them from images or webcam input. The project combines GUI development with image processing using OpenCV.",
-    year: "2026",
-    category: "Python Development",
-  },
-  {
-    id: 8,
-    title: "Engineering Education",
-    shortDescription:
-        "Studying Electronics, Telecommunications and Information Technology.",
-    fullDescription:
-        "As a student at the Faculty of Electronics, Telecommunications and Information Technology, I have worked on projects involving programming, embedded systems, databases, web development and digital systems design.",
-    year: "2022-2026",
+      "Studying Electronics, Telecommunications and Information Technology at the National University of Science and Technology POLITEHNICA Bucharest. Relevant areas include programming, databases, embedded systems, digital circuits and web development.",
+    year: "2024 – 2028",
     category: "Education",
   },
 ];
