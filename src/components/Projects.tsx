@@ -14,12 +14,15 @@ function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   const getProjectIcon = (title: string) => {
-    if (title.includes('To-Do')) return '📋';
-    if (title.includes('Blackjack')) return '🎮';
-    if (title.includes('QR')) return '🔳';
-    if (title.includes('Auto')) return '🚗';
-    return '📁';
-  };
+  if (title.includes('Task Management')) return '📋';
+  if (title.includes('Blackjack')) return '🎮';
+  if (title.includes('QR Code')) return '▣';
+  if (title.includes('Automotive Service')) return '🚗';
+  if (title.includes('Personal Portfolio')) return '💻';
+  if (title.includes('Inductive Metal Detector')) return '🧲';
+
+  return '📁';
+};
 
   return (
     <section id="projects" className="projects-section">
