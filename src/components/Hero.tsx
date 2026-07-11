@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
-        <span className="hero-tagline">Programming • Web Development • AI</span>
+        <span className="hero-tagline">SOFTWARE DEVELOPMENT • DATABASES • AI</span>
 
         <img
           src={profileImg}
@@ -16,7 +16,7 @@ function Hero() {
         <h1>Andrei Barbuceanu</h1>
 
         <p className="hero-description">
-          I am an Electronics and Telecommunications Engineering student passionate about programming, web development and artificial intelligence. I enjoy building practical projects and continuously learning new technologies.
+          I am a third-year Electronics and Telecommunications Engineering student focused on software development, databases and process automation. I enjoy building practical applications with Python, SQL, React and AI-assisted development tools while continuously improving my technical skills.
         </p>
 
         <a href="#projects" className="cta-button">
