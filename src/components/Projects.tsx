@@ -1,6 +1,6 @@
-import './Projects.css';
-import projects from '../data/projects';
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+import projects from "../data/projects";
+import "./Projects.css";
 
 type Project = {
   title: string;
@@ -14,15 +14,39 @@ function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   const getProjectIcon = (title: string) => {
-  if (title.includes('Task Management')) return '📋';
-  if (title.includes('Blackjack')) return '🎮';
-  if (title.includes('QR Code')) return '▣';
-  if (title.includes('Automotive Service')) return '🚗';
-  if (title.includes('Personal Portfolio')) return '💻';
-  if (title.includes('Inductive Metal Detector')) return '🧲';
+    if (title.includes("Task Management")) return "📋";
+    if (title.includes("Blackjack")) return "🎮";
+    if (title.includes("QR Code")) return "▣";
+    if (title.includes("Automotive Service")) return "🚗";
+    if (title.includes("Personal Portfolio")) return "💻";
+    if (title.includes("Inductive Metal Detector")) return "🧲";
 
-  return '📁';
-};
+    return "📁";
+  };
+
+  const closeModal = () => {
+    setSelected(null);
+  };
+
+  useEffect(() => {
+    if (!selected) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selected]);
 
   return (
     <section id="projects" className="projects-section">
@@ -30,31 +54,39 @@ function Projects() {
         <h2>My Projects</h2>
         <p>A selection of web, embedded and software projects I have built.</p>
       </div>
+
       <div className="projects-grid">
-        {projects.map((project) => (//map() creeaza automat carduri pt cate proiecte am eu
-          <div
+        {projects.map((project) => (
+          <article
             key={project.title}
             className="project-card"
             role="button"
             tabIndex={0}
-            onClick={() => setSelected(project)}//cand apas pe card salvez proiectul in selected si deschide modalul
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') setSelected(project);//pt accesibilitate sa pot deschide modalul din enter
+            onClick={() => setSelected(project)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                setSelected(project);
+              }
             }}
           >
-            <div className="project-icon" aria-hidden>
-              {getProjectIcon(project.title)}  
+            <div className="project-icon" aria-hidden="true">
+              {getProjectIcon(project.title)}
             </div>
 
             <div className="project-body">
               <h3>{project.title}</h3>
+
               <p>{project.description}</p>
 
-              {project.technologies && project.technologies.length > 0 && (
+              {project.technologies.length > 0 && (
                 <div className="tech-list">
-                  {project.technologies.map((tech) => (
-                    <span className="tech-badge" key={`${project.title}-${tech}`}>
-                      {tech}
+                  {project.technologies.map((technology) => (
+                    <span
+                      className="tech-badge"
+                      key={`${project.title}-${technology}`}
+                    >
+                      {technology}
                     </span>
                   ))}
                 </div>
@@ -62,35 +94,67 @@ function Projects() {
 
               <span className="project-cta">View Project</span>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
-      {/* Modal */}
       {selected && (
-        <div className="modal-overlay" onClick={() => setSelected(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelected(null)}>
-              Close
+        <div
+          className="project-modal-overlay"
+          onClick={closeModal}
+          role="presentation"
+        >
+          <div
+            className="project-modal"
+            onClick={(event) => event.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-modal-title"
+          >
+            <button
+              type="button"
+              className="project-modal-close"
+              onClick={closeModal}
+              aria-label="Close project details"
+            >
+              ×
             </button>
-            <h3>{selected.title}</h3>
-            <p>{selected.description}</p>
+
+            <div className="project-modal-icon" aria-hidden="true">
+              {getProjectIcon(selected.title)}
+            </div>
+
+            <h3 id="project-modal-title">{selected.title}</h3>
+
+            <p className="project-modal-description">
+              {selected.description}
+            </p>
 
             <div className="modal-tech-list">
-              {selected.technologies.map((t) => (
-                <span className="tech-badge" key={`${selected.title}-${t}`}>
-                  {t}
+              {selected.technologies.map((technology) => (
+                <span
+                  className="tech-badge"
+                  key={`${selected.title}-${technology}`}
+                >
+                  {technology}
                 </span>
               ))}
             </div>
 
             <div className="modal-actions">
-              {selected.url && selected.url !== '#' ? (
-                <a href={selected.url} target="_blank" rel="noopener noreferrer" className="cta-button">
+              {selected.url && selected.url !== "#" ? (
+                <a
+                  href={selected.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-repository-button"
+                >
                   View Repository
                 </a>
               ) : (
-                <p style={{ color: '#8b949e', fontSize: '0.95rem' }}>Repository not available publicly.</p>
+                <p className="repository-unavailable">
+                  Repository not available publicly.
+                </p>
               )}
             </div>
           </div>
