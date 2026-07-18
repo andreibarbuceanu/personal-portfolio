@@ -1,5 +1,5 @@
 import './Hero.css';
-const profileImg = new URL('../../assets/IMG_6089.JPG', import.meta.url).href; //la build poate redenumi fisierele asa ca folosesc new URL
+const profileImg = new URL('../../assets/IMG_6089.JPG', import.meta.url).href;
 
 function Hero() {
   return (

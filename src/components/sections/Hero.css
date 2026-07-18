@@ -1,28 +1,21 @@
 .hero {
-    /* Keep hero compact but larger so Projects sit below the fold.
-      Set hero to ~78% of viewport height and add bottom padding so
-      visitors need a short scroll to reach Projects. */
     min-height: 90vh;
     display: flex;
-    align-items: flex-start; /* place content a bit higher on the page */
+    align-items: flex-start;
     justify-content: center;
-    /* Add safe transitions for visual layout changes (Module III) */
     transition: background-color var(--layout-transition) ease-in-out, color var(--layout-transition) ease-in-out, padding var(--layout-transition) ease-in-out, margin var(--layout-transition) ease-in-out;
-    /* Use the global section padding for consistent vertical rhythm. */
     padding: calc(var(--section-vertical-padding) / 2) 20px;
-    margin-top: 60px; /* account for fixed navbar */
-    margin-bottom: 1.5rem; /* subtle separation from Projects */
+    margin-top: 60px;
+    margin-bottom: 1.5rem;
 }
 
 .hero-content {
-  /* Keep the content compact and centered */
   max-width: 760px;
   text-align: center;
   padding: 28px;
   transition: padding var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
 }
 
-/* Hero tagline */
 .hero-tagline {
   display: inline-block;
   font-size: 0.85rem;
@@ -38,11 +31,10 @@
 }
 
 .profile-image {
-  /* Circular profile image: target 220px but responsive on small screens */
   width: min(220px, 40vw);
   height: min(220px, 40vw);
   border-radius: 50%;
-  object-fit: cover; /* ensures the image fills the circle */
+  object-fit: cover;
   display: block;
   margin: 20px auto 18px auto;
   border: 2px solid #30363d;
@@ -52,7 +44,6 @@
 
 .hero-content h1 {
   font-size: 2rem;
-  /* increased spacing below titles for better rhythm */
   margin-bottom: calc(var(--section-gap) / 2);
   color: #ffffff;
 }
@@ -64,7 +55,6 @@
 }
 
 .cta-button {
-  /* Professional-looking call-to-action button */
   display: inline-block;
   background: #58a6ff;
   color: #0f1117;
@@ -82,7 +72,6 @@
   background-color: #79c0ff;
 }
 
-/* Ensure smooth scroll if not set globally */
 html {
   scroll-behavior: smooth;
 }

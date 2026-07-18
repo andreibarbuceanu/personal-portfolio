@@ -1,24 +1,16 @@
 .layout-switcher {
   display: flex;
   align-items: center;
-  gap: 12px; /* spacing between label and control */
+  gap: 12px;
   position: relative;
 }
 
-/* Label styling: subtle, matches navbar muted text */
 .layout-switcher-label {
   color: var(--muted-text, #8b949e);
   font-size: 0.85rem;
   letter-spacing: 0.6px;
 }
 
-/*
-  Pill-shaped select styling for navbar integration.
-  - Remove default browser appearance where possible.
-  - Use navbar background and border tokens so the control adapts to layouts.
-  - Add a custom chevron using layered gradients so the arrow color follows the
-    current `--accent-color` (no JS change required).
-*/
 .layout-switcher-select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -26,15 +18,13 @@
   background-color: var(--nav-bg, rgba(15,17,23,0.95));
   color: var(--text-color, #ffffff);
   border: 1px solid var(--nav-border, #30363d);
-  padding: 6px 12px 6px 10px; /* leave right padding for the chevron */
+  padding: 6px 12px 6px 10px;
   padding-right: 36px;
-  border-radius: 999px; /* pill */
+  border-radius: 999px;
   font-size: 0.9rem;
   line-height: 1;
   cursor: pointer;
-  /* Transition used when layouts switch (Module III). Animates safe properties only. */
   transition: background-color var(--layout-transition) ease-in-out, color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
-  /* custom chevron created with two gradients; color follows --accent-color */
   background-image: linear-gradient(45deg, transparent 50%, var(--accent-color) 50%), linear-gradient(135deg, var(--accent-color) 50%, transparent 50%);
   background-repeat: no-repeat;
   background-position: calc(100% - 14px) center, calc(100% - 10px) center;
@@ -52,7 +42,6 @@
   border-color: var(--accent-color);
 }
 
-/* Small screens: hide label and make the pill slightly smaller */
 @media (max-width: 600px) {
   .layout-switcher-label { display: none; }
   .layout-switcher-select {
@@ -62,7 +51,6 @@
   }
 }
 
-/* Ensure the chevron does not appear when printing */
 @media print {
   .layout-switcher-select { background-image: none; }
 }

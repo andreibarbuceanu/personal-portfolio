@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./GitHubCommits.css";
 
-// Interfaces for GitHub data
 interface CommitData {
   commit: {
     message: string;
@@ -11,7 +10,6 @@ interface CommitData {
   };
 }
 
-// TypeScript interface for a repository from GitHub API
 interface Repository {
   name: string;
 }

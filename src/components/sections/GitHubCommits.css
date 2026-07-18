@@ -1,12 +1,7 @@
-/* GitHubCommits.css */
-
 .commits-section {
-  /* Apply global vertical padding for consistent rhythm across sections */
   padding: var(--section-vertical-padding) 20px;
   max-width: 1100px;
   margin: 0 auto;
-  /* Keep background consistent with the root page color; use a subtle
-     top divider to separate sections without adding a background block. */
   background: none;
   border-top: 1px solid rgba(255,255,255,0.02);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.01);
@@ -22,9 +17,6 @@
   margin-bottom: calc(var(--section-gap) / 2);
   color: #ffffff;
 }
-
-/* Alternate subtle background to separate sections visually */
-/* NOTE: background-color removed to keep a consistent main background */
 
 .commits-header p {
   color: #8b949e;
@@ -82,7 +74,6 @@
   border-radius: 6px;
   padding: 16px;
   border: 1px solid #30363d;
-  /* Safe transitions for Module III layout changes */
   transition: background-color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
 }
 

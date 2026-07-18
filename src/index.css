@@ -16,17 +16,10 @@ body {
   color: #ffffff;
 }
 
-/*
-  Global spacing system for consistent vertical rhythm across the site.
-  - `--section-vertical-padding` approximates the requested ~120px per section.
-  - `--section-gap` is used for spacing below headers/titles inside sections.
-  Using CSS variables makes it easy to adjust spacing later from one place.
-*/
 :root {
   --section-vertical-padding: 120px;
   --section-gap: 28px;
 
-  /* Visual tokens used by different layouts. */
   --accent-color: #58a6ff;
   --bg-color: #0f1117;
   --text-color: #ffffff;
@@ -40,14 +33,9 @@ body {
   --button-bg: linear-gradient(180deg, #2b6fd6, #184e9c);
   --button-color: #ffffff;
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  /* transition duration used for smooth Module III layout switching
-     - Animates safe properties only: background-color, color, border-color,
-       box-shadow, border-radius, padding, margin, transform
-  */
   --layout-transition: 320ms;
 }
 
-/* Default (professional) layout class on body */
 .layout-professional {
   --accent-color: #58a6ff;
   --bg-color: #0f1117;
@@ -65,10 +53,9 @@ body {
   --section-vertical-padding: 120px;
 }
 
-/* Showcase layout: premium landing feel with large split hero, soft glow, and featured cards */
 .layout-showcase {
-  --accent-color: #a78bfa; /* subtle premium purple */
-  --bg-color: #071027; /* deep navy base for gradient */
+  --accent-color: #a78bfa;
+  --bg-color: #071027;
   --text-color: #f7fbff;
   --muted-text: #cbd5e1;
   --card-bg: rgba(255,255,255,0.03);
@@ -84,15 +71,12 @@ body {
   --section-gap: 36px;
 }
 
-/* Showcase-specific global adjustments */
 body.layout-showcase {
   background-image: radial-gradient(ellipse at top left, rgba(167,139,250,0.06), transparent 20%), radial-gradient(ellipse at bottom right, rgba(88,165,255,0.03), transparent 30%), linear-gradient(180deg, #041025 0%, #071027 60%);
   background-size: cover;
 }
 
-/* Larger split hero for showcase */
 .layout-showcase .hero {
-  /* Keep the hero large but ensure it fits mostly within the first viewport */
   min-height: 82vh;
   display: flex;
   align-items: center;
@@ -102,47 +86,36 @@ body.layout-showcase {
   margin-top: 60px;
 }
 
-/* Showcase split hero layout: create a strict two-column grid so the left
-   column contains a grouped vertical block (badge, name, description, CTA)
-   and the right column contains only the profile image. Using grid allows
-   explicit placement of individual elements into columns without changing
-   component markup. */
 .layout-showcase .hero-content {
   display: grid;
   grid-template-columns: minmax(360px, 1fr) minmax(420px, 45vw);
   grid-auto-rows: auto;
   gap: 36px;
-  align-items: center; /* vertically center the two columns */
+  align-items: center;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 8px;
 }
 
-/* Place the left-side text elements into column 1 so they form a single
-   stacked block: badge, name, description, and CTA button. */
 .layout-showcase .hero-content .hero-tagline,
 .layout-showcase .hero-content h1,
 .layout-showcase .hero-content .hero-description,
 .layout-showcase .hero-content .cta-button {
   grid-column: 1;
-  justify-self: start; /* left-align the block */
-  text-align: left; /* ensure text is left-aligned */
+  justify-self: start;
+  text-align: left;
 }
 
-/* Constrain description width for readability */
 .layout-showcase .hero-content .hero-description {
   max-width: 500px;
   margin-top: 6px;
 }
 
-/* CTA should sit below the description */
 .layout-showcase .hero-content .cta-button {
   margin-top: 12px;
   display: inline-block;
 }
 
-/* Place the image in column 2 and span the left block height so the image
-   visually aligns with the center of the text block. */
 .layout-showcase .hero-content .profile-image {
   grid-column: 2;
   grid-row: 1 / span 4;
@@ -150,10 +123,9 @@ body.layout-showcase {
   height: auto;
   object-fit: cover;
   border-radius: 12px;
-  justify-self: end; /* keep image to the right */
+  justify-self: end;
 }
 
-/* Responsive: stack the split hero on small screens and center items */
 @media (max-width: 900px) {
   .layout-showcase .hero {
     padding: 40px 16px;
@@ -163,8 +135,8 @@ body.layout-showcase {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    text-align: left; /* keep left alignment when stacked */
-    align-items: start; /* align stacked items to the top/left */
+    text-align: left;
+    align-items: start;
   }
   .layout-showcase .hero-content .profile-image {
     grid-column: 1;
@@ -172,19 +144,18 @@ body.layout-showcase {
     width: min(320px, 60vw);
     height: auto;
     margin: 18px 0 0 0;
-    justify-self: center; /* keep image centered horizontally when stacked */
+    justify-self: center;
   }
   .layout-showcase .hero-content .hero-tagline,
   .layout-showcase .hero-content h1,
   .layout-showcase .hero-content .hero-description,
   .layout-showcase .hero-content .cta-button {
     grid-column: 1;
-    justify-self: start; /* keep left-aligned when stacked */
+    justify-self: start;
     text-align: left;
   }
 }
 
-/* Reduce extra top space for hero tagline and push main text slightly up */
 .layout-showcase .hero-tagline {
   margin-top: 0;
   margin-bottom: 8px;
@@ -195,16 +166,14 @@ body.layout-showcase {
 }
 
 .layout-showcase .profile-image {
-  /* Ensure profile image is large but constrained for balance */
   width: min(480px, 45vw);
   height: auto;
-  border-radius: 12px; /* less circular to feel like a featured image */
+  border-radius: 12px;
   margin: 0;
   box-shadow: 0 20px 60px rgba(167,139,250,0.12);
   border: 1px solid rgba(255,255,255,0.04);
 }
 
-/* Make projects feel featured: wider cards, bigger icons, more spacing */
 .layout-showcase .projects-grid {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 36px;
@@ -223,9 +192,7 @@ body.layout-showcase {
 
 .layout-showcase .project-icon { font-size: 5rem; color: var(--accent-color); }
 
-/* CV section as highlighted feature */
 .layout-showcase .cv-section {
-  /* Center the CV feature block and keep a consistent max-width */
   max-width: 1100px;
   margin: 0 auto;
   background: rgba(255,255,255,0.02);
@@ -237,12 +204,10 @@ body.layout-showcase {
 .layout-showcase .contact-grid { justify-items: center; }
 .layout-showcase .contact-card { max-width: 520px; padding: 28px; border-radius: 12px; box-shadow: 0 14px 40px rgba(2,6,23,0.45); }
 
-/* Center CV carousel contents (cards, arrows, dots) and ensure download button is centered */
 .layout-showcase .carousel-container { justify-content: center; }
 .layout-showcase .carousel-dots { justify-content: center; }
 .layout-showcase .cv-download-button { margin: 0 auto; display: block; }
 .layout-retro .hero-content {
-  /* Keep hero content constrained and centered in retro mode */
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
@@ -260,7 +225,6 @@ body.layout-showcase {
 .layout-retro .cv-section,
 .layout-retro .projects-section,
 .layout-retro .contact-section {
-  /* Consistent max width and centered layout for all sections */
   max-width: 1100px;
   margin: 0 auto;
   padding-left: 20px;
@@ -269,17 +233,15 @@ body.layout-showcase {
 
 .layout-retro .carousel-container { justify-content: center; }
 
-/* Subtle glow for CTA buttons in showcase */
 .layout-showcase .cta-button { box-shadow: 0 10px 36px rgba(167,139,250,0.18); }
 
-/* Retro layout: warmer accent, visible borders, system fonts only */
 .layout-retro {
-  --accent-color: #39ff14; /* bright terminal green */
+  --accent-color: #39ff14;
   --bg-color: #050505;
   --text-color: #bfffbf;
   --muted-text: #8fbf8f;
   --card-bg: #0b0b0b;
-  --card-radius: 0px; /* square corners */
+  --card-radius: 0px;
   --card-shadow: none;
   --nav-bg: #000000;
   --nav-border: #0b3b0b;
@@ -291,7 +253,6 @@ body.layout-showcase {
   --section-gap: 20px;
 }
 
-/* Retro-specific styles: square cards, strong borders, monospace feel */
 .layout-retro body { background-color: #000000; }
 .layout-retro .project-card,
 .layout-retro .achievement-card,
@@ -303,7 +264,6 @@ body.layout-showcase {
   box-shadow: none;
 }
 
-/* Terminal-like headings */
 .layout-retro h2,
 .layout-retro h1 {
   font-family: var(--font-family);
@@ -317,7 +277,6 @@ body.layout-showcase {
   margin-right: 6px;
 }
 
-/* Buttons appear like terminal toggles */
 .layout-retro .cta-button,
 .layout-retro .carousel-button,
 .layout-retro .modal .cta-button {
@@ -328,19 +287,14 @@ body.layout-showcase {
   box-shadow: none;
 }
 
-/* Retro project icon sizing and color */
 .layout-retro .project-icon { color: var(--accent-color); font-size: 3.2rem; }
 
-/* Make section separators more visible */
 .layout-retro .projects-section,
 .layout-retro .cv-section,
 .layout-retro .contact-section {
   border-top: 2px solid rgba(255,255,255,0.02);
 }
 
-/* Apply smooth, GPU-friendly transitions to safe visual properties when
-   switching layouts for Module III. We avoid animating width/height to
-   keep performance good. */
 body,
 main,
 section,
@@ -356,7 +310,6 @@ section,
   transition: background-color var(--layout-transition) ease-in-out, color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, padding var(--layout-transition) ease-in-out, margin var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out, border-radius var(--layout-transition) ease-in-out;
 }
 
-/* Use variables for page colors and fonts so layouts can swap tokens */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);

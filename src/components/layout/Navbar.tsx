@@ -1,6 +1,5 @@
 import './Navbar.css';
-import LayoutSwitcher from './LayoutSwitcher'; //componenta care mi schimba layout ul
-//meniul e ca o lista de elemente de navigare
+import LayoutSwitcher from './LayoutSwitcher';
 function Navbar() {
   return (
     <nav className="navbar">

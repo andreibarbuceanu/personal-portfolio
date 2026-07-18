@@ -8,15 +8,15 @@ import GitHubCommits from './components/sections/GitHubCommits';
 import Contact from './components/sections/Contact';
 
 function App() {
-  useEffect(() => { //ruleaza dupa ce pagina s a incarcat pt layout
+  useEffect(() => {
     try {
       let saved = localStorage.getItem('portfolio_layout');
       if (saved) {
         if (saved === 'compact') saved = 'showcase';
         const prefix = 'layout-';
-        Array.from(document.body.classList)//imi da toate clasele css de pe body sub forma de vector
+        Array.from(document.body.classList)
           .filter((c) => c.startsWith(prefix))
-          .forEach((c) => document.body.classList.remove(c)); //imi elimina clasele cu layout vechi si le adauga pe alea noi
+          .forEach((c) => document.body.classList.remove(c));
         document.body.classList.add(`${prefix}${saved}`);
       } else {
         document.body.classList.add('layout-professional');
