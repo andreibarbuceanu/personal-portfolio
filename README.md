@@ -55,15 +55,6 @@ npm install
 npm run dev
 ```
 
-## Projects
-
-- **Task Management Web Application** — HTML, CSS, JavaScript, LocalStorage
-- **Blackjack Game on ESP32** — ESP32, C++, Arduino IDE, OLED Display
-- **QR Code Generator & Scanner** — Python, Tkinter, OpenCV, QRCode, SMTP
-- **Automotive Service Management Web Application** — React, TypeScript, Node.js, Express.js, MySQL, REST API
-- **Personal Portfolio Website** — React, TypeScript, Vite, GitHub API, LocalStorage, GitHub Pages
-- **Inductive Metal Detector** — Analog Electronics, Operational Amplifiers, Circuit Design, Signal Analysis
-
 ## Future Improvements
 
 - Improve accessibility
