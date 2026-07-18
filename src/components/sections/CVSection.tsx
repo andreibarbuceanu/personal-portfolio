@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { achievements, type Achievement } from "../data/achievements";
+import { achievements, type Achievement } from "../../data/achievements";
 import "./CVSection.css";
 
 function CVSection() {

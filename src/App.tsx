@@ -1,11 +1,11 @@
 import './App.css';
 import { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Projects from './components/Projects';
-import GitHubCommits from './components/GitHubCommits';
-import Contact from './components/Contact';
-import CVSection from './components/CVSection';
+import Navbar from './components/layout/Navbar';
+import Hero from './components/sections/Hero';
+import Projects from './components/sections/Projects';
+import CVSection from './components/sections/CVSection';
+import GitHubCommits from './components/sections/GitHubCommits';
+import Contact from './components/sections/Contact';
 
 function App() {
   useEffect(() => { //ruleaza dupa ce pagina s a incarcat pt layout
