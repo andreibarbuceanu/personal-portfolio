@@ -15,10 +15,6 @@ const layoutOptions: LayoutMode[] = [
 function getSavedLayout(): LayoutMode {
   const savedLayout = localStorage.getItem(STORAGE_KEY);
 
-  if (savedLayout === 'compact') {
-    return 'showcase';
-  }
-
   if (layoutOptions.includes(savedLayout as LayoutMode)) {
     return savedLayout as LayoutMode;
   }
