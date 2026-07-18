@@ -1,46 +1,65 @@
 import { useEffect, useState } from 'react';
+
 import './LayoutSwitcher.css';
 
-type LayoutMode = 'professional' | 'showcase' | 'retro'; 
+type LayoutMode = 'professional' | 'showcase' | 'retro';
 
 const STORAGE_KEY = 'portfolio_layout';
 
+const layoutOptions: LayoutMode[] = [
+  'professional',
+  'showcase',
+  'retro',
+];
+
+function getSavedLayout(): LayoutMode {
+  const savedLayout = localStorage.getItem(STORAGE_KEY);
+
+  if (savedLayout === 'compact') {
+    return 'showcase';
+  }
+
+  if (layoutOptions.includes(savedLayout as LayoutMode)) {
+    return savedLayout as LayoutMode;
+  }
+
+  return 'professional';
+}
+
 function LayoutSwitcher() {
-  const [mode, setMode] = useState<LayoutMode>(() => {
-    try {
-      const savedRaw = localStorage.getItem(STORAGE_KEY);
-      if (!savedRaw) return 'professional';
-      const normalized = savedRaw === 'compact' ? 'showcase' : (savedRaw as LayoutMode);
-      return normalized;
-    } catch {
-      return 'professional';
-    }
-  });
+  const [mode, setMode] = useState<LayoutMode>(getSavedLayout);
 
   useEffect(() => {
-    const classPrefix = 'layout-';
-    Array.from(document.body.classList)
-      .filter((c) => c.startsWith(classPrefix))
-      .forEach((c) => document.body.classList.remove(c));
+    document.body.classList.remove(
+      'layout-professional',
+      'layout-showcase',
+      'layout-retro',
+    );
 
-    document.body.classList.add(`${classPrefix}${mode}`);
-
-    try {
-      localStorage.setItem(STORAGE_KEY, mode);
-    } catch {
-      // ignore
-    }
+    document.body.classList.add(`layout-${mode}`);
+    localStorage.setItem(STORAGE_KEY, mode);
   }, [mode]);
+
+  function handleLayoutChange(
+    event: React.ChangeEvent<HTMLSelectElement>,
+  ) {
+    setMode(event.target.value as LayoutMode);
+  }
 
   return (
     <div className="layout-switcher">
-      <label htmlFor="layout-select" className="layout-switcher-label">Layout</label>
+      <label
+        htmlFor="layout-select"
+        className="layout-switcher-label"
+      >
+        Layout
+      </label>
+
       <select
         id="layout-select"
         className="layout-switcher-select"
         value={mode}
-        onChange={(e) => setMode(e.target.value as LayoutMode)}
-        aria-label="Choose layout mode"
+        onChange={handleLayoutChange}
       >
         <option value="professional">Professional</option>
         <option value="showcase">Showcase</option>
