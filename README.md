@@ -1,84 +1,72 @@
 # Personal Portfolio
 
-A responsive personal portfolio for Alin-Andrei Bărbuceanu, presenting projects, achievements, a downloadable CV, contact details, and recent public GitHub activity.
+This is my personal portfolio website, built with React, TypeScript, and Vite. It presents my software projects, technical skills, certifications, CV, GitHub activity, and contact information.
+
+## Live Demo
+
+https://andreibarbuceanu.github.io/personal-portfolio/
+
+## Screenshots
+
+![Home page](screenshots/home.png)
+
+![Projects section](screenshots/projects.png)
+
+![CV and achievements](screenshots/cv-achievements.png)
+
+![Alternate layout](screenshots/alternate-layout.png)
 
 ## Features
 
-- Responsive React portfolio with reusable components
-- Projects section with modal details
-- CV download and achievements carousel
-- GitHub activity integration
-- Multiple selectable layouts with localStorage persistence
+- Responsive interface
+- Multiple layout themes
+- Project showcase
+- Downloadable CV
+- Certifications and achievements
+- GitHub activity
+- Contact section
 
-## Technology Stack
+## Technologies
 
-React, TypeScript, Vite, CSS, ESLint, and the GitHub public API.
+- React
+- TypeScript
+- Vite
+- CSS
+- GitHub Pages
 
 ## Project Structure
 
 ```text
 src/
-  components/   UI sections and layout switcher
-  data/         Project and achievement content
-  assets/       Local images
-public/
-  cv/           Downloadable CV
-screenshots/    README screenshot placeholders
+  assets/              Images and other local assets
+  components/
+    layout/            Navigation and layout switcher
+    sections/          Portfolio page sections
+  data/                Project and achievement data
+screenshots/           Portfolio screenshots
 ```
 
-## Local Installation
+## Getting Started
 
 ```bash
+git clone https://github.com/andreibarbuceanu/personal-portfolio.git
+cd personal-portfolio
 npm install
 npm run dev
 ```
 
-## Commands
+## Projects
 
-```bash
-npm run lint
-npm run build
-npm run preview
-```
-
-## Deployment
-
-The portfolio is deployed with GitHub Pages.
-
-```bash
-npm run deploy
-```
-
-## Screenshots
-
-### Home Page
-![Home Page](screenshots/home.png)
-
-### Projects Section
-![Projects Section](screenshots/projects.png)
-
-### CV and Achievements
-![CV and Achievements](screenshots/cv-achievements.png)
-
-### Alternate Layout
-![Alternate Layout](screenshots/alternate-layout.png)
-
-
-## Live version
-
-[View the live portfolio](https://andreibarbuceanu.github.io/personal-portfolio/)
-
-## Limitations
-
-- GitHub activity depends on the unauthenticated GitHub public API and its rate limits.
-- Some project repositories are not publicly available.
+- **Task Management Web Application** — HTML, CSS, JavaScript, LocalStorage
+- **Blackjack Game on ESP32** — ESP32, C++, Arduino IDE, OLED Display
+- **QR Code Generator & Scanner** — Python, Tkinter, OpenCV, QRCode, SMTP
+- **Automotive Service Management Web Application** — React, TypeScript, Node.js, Express.js, MySQL, REST API
+- **Personal Portfolio Website** — React, TypeScript, Vite, GitHub API, LocalStorage, GitHub Pages
+- **Inductive Metal Detector** — Analog Electronics, Operational Amplifiers, Circuit Design, Signal Analysis
 
 ## Future Improvements
 
-- Add verified public links for remaining projects.
-
-## Author
-
-Alin-Andrei Bărbuceanu  
-GitHub: https://github.com/andreibarbuceanu  
-LinkedIn: https://www.linkedin.com/in/alin-andrei-barbuceanu-96a473388/
+- Improve accessibility
+- Add more project case studies
+- Improve performance
+- Refine the design
