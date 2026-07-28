@@ -1,28 +1,20 @@
 import { useEffect, useState } from "react";
-import projects from "../../data/projects";
+import projects, { type Project } from "../../data/projects";
 import "./Projects.css";
 
-type Project = {
-  title: string;
-  description: string;
-  image: string;
-  url: string;
-  technologies: string[];
-};
+function getProjectIcon(title: string) {
+  if (title.includes("Task Management")) return "📋";
+  if (title.includes("Blackjack")) return "🎮";
+  if (title.includes("QR Code")) return "▣";
+  if (title.includes("Automotive Service")) return "🚗";
+  if (title.includes("Personal Portfolio")) return "💻";
+  if (title.includes("Inductive Metal Detector")) return "🧲";
+
+  return "📁";
+}
 
 function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
-
-  const getProjectIcon = (title: string) => {
-    if (title.includes("Task Management")) return "📋";
-    if (title.includes("Blackjack")) return "🎮";
-    if (title.includes("QR Code")) return "▣";
-    if (title.includes("Automotive Service")) return "🚗";
-    if (title.includes("Personal Portfolio")) return "💻";
-    if (title.includes("Inductive Metal Detector")) return "🧲";
-
-    return "📁";
-  };
 
   const closeModal = () => {
     setSelected(null);
@@ -52,7 +44,10 @@ function Projects() {
     <section id="projects" className="projects-section">
       <div className="projects-header">
         <h2>My Projects</h2>
-        <p>A selection of web, embedded and software projects I have built.</p>
+        <p>
+          Some of the projects I have worked on while learning and
+          experimenting.
+        </p>
       </div>
 
       <div className="projects-grid">

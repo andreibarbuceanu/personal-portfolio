@@ -1,8 +1,9 @@
-import './Navbar.css';
-import LayoutSwitcher from './LayoutSwitcher';
+import "./Navbar.css";
+import LayoutSwitcher from "./LayoutSwitcher";
+
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label="Main navigation">
       <div className="navbar-container">
         <ul className="navbar-menu">
           <li>
@@ -15,25 +16,23 @@ function Navbar() {
               Projects
             </a>
           </li>
-
           <li>
             <a href="#cv" className="navbar-link">
               CV
             </a>
           </li>
-
           <li>
             <a href="#commits" className="navbar-link">
               GitHub
             </a>
           </li>
-          
           <li>
             <a href="#contact" className="navbar-link">
               Contact
             </a>
           </li>
         </ul>
+
         <div className="navbar-utilities">
           <LayoutSwitcher />
         </div>

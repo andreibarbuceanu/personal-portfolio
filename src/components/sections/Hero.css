@@ -1,77 +1,66 @@
 .hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    transition: background-color var(--layout-transition) ease-in-out, color var(--layout-transition) ease-in-out, padding var(--layout-transition) ease-in-out, margin var(--layout-transition) ease-in-out;
-    padding: calc(var(--section-vertical-padding) / 2) 20px;
-    margin-top: 60px;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 90vh;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  padding: calc(var(--section-vertical-padding) / 2) 20px;
 }
 
 .hero-content {
   max-width: 760px;
-  text-align: center;
   padding: 28px;
-  transition: padding var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
+  text-align: center;
 }
 
 .hero-tagline {
   display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
   font-size: 0.85rem;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #58a6ff;
-  font-weight: 600;
-  margin-bottom: 20px;
-  background: transparent;
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: 1px solid #30363d;
 }
 
 .profile-image {
+  display: block;
   width: min(220px, 40vw);
   height: min(220px, 40vw);
+  margin: 20px auto 18px;
+  border: 2px solid var(--border-color);
   border-radius: 50%;
+  box-shadow: var(--card-shadow);
   object-fit: cover;
-  display: block;
-  margin: 20px auto 18px auto;
-  border: 2px solid #30363d;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: box-shadow var(--layout-transition) ease-in-out, border-radius var(--layout-transition) ease-in-out, transform var(--layout-transition) ease-in-out;
 }
 
 .hero-content h1 {
   font-size: 2rem;
   margin-bottom: calc(var(--section-gap) / 2);
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .hero-description {
-  color: #8b949e;
-  line-height: 1.6;
   margin-bottom: var(--section-gap);
+  color: var(--muted-text);
+  line-height: 1.6;
 }
 
 .cta-button {
   display: inline-block;
-  background: #58a6ff;
-  color: #0f1117;
   padding: 12px 20px;
+  background: var(--button-bg);
+  color: var(--button-color);
   border-radius: 6px;
-  text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
-  transition: transform var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out, background-color var(--layout-transition) ease-in-out;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(88, 166, 255, 0.25);
-  background-color: #79c0ff;
-}
-
-html {
-  scroll-behavior: smooth;
+  opacity: 0.85;
 }

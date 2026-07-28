@@ -12,9 +12,9 @@ export const achievements: Achievement[] = [
     id: 1,
     title: "Cambridge English C1 Certification",
     shortDescription:
-      "Earned a Cambridge English qualification at CEFR Level C1.",
+      "Cambridge English qualification at CEFR Level C1.",
     fullDescription:
-      "Successfully completed the Cambridge English examination, demonstrating advanced communication skills in reading, writing, listening and speaking at CEFR Level C1.",
+      "I passed the Cambridge English exam at C1 level, covering reading, writing, listening and speaking.",
     year: "2023",
     category: "Languages",
   },
@@ -22,9 +22,9 @@ export const achievements: Achievement[] = [
     id: 2,
     title: "Web Programming 101",
     shortDescription:
-      "Completed a practical course covering frontend web development fundamentals.",
+      "A practical introduction to frontend development.",
     fullDescription:
-      "Completed the Web Programming 101 course through Cisco Networking Academy, gaining practical experience with HTML, CSS, JavaScript, DOM manipulation, browser storage and network requests.",
+      "I completed this Cisco Networking Academy course while learning HTML, CSS, JavaScript, DOM manipulation, browser storage and network requests.",
     year: "2025",
     category: "Web Development",
   },
@@ -32,9 +32,9 @@ export const achievements: Achievement[] = [
     id: 3,
     title: "Web Programming 102",
     shortDescription:
-      "Expanded my knowledge of modern web application development.",
+      "The next step in learning how web applications are built.",
     fullDescription:
-      "Completed the Web Programming 102 course through Cisco Networking Academy, strengthening my understanding of JavaScript, application structure, interactive interfaces and modern web development practices.",
+      "This Cisco Networking Academy course helped me continue working with JavaScript, application structure and interactive interfaces.",
     year: "2026",
     category: "Web Development",
   },
@@ -42,9 +42,9 @@ export const achievements: Achievement[] = [
     id: 4,
     title: "IC3 Global Standard 5 Certification",
     shortDescription:
-      "Earned an internationally recognized digital literacy certification.",
+      "An international certification in essential digital skills.",
     fullDescription:
-      "Completed the IC3 Global Standard 5 certification, covering computing fundamentals, productivity applications, online communication, cybersecurity awareness and essential digital skills.",
+      "The certification covered computer fundamentals, productivity applications, online communication and basic cybersecurity.",
     year: "2023",
     category: "Certification",
   },
@@ -52,9 +52,9 @@ export const achievements: Achievement[] = [
     id: 5,
     title: "VOIS Summer School",
     shortDescription:
-      "Participated in hands-on sessions covering software development and emerging technologies.",
+      "Hands-on sessions from several areas of software development.",
     fullDescription:
-      "Participated in the VOIS Summer School, attending practical sessions on Python, frontend development, cloud computing, DevOps, quality assurance, artificial intelligence, cybersecurity, Agile practices and software architecture.",
+      "At the VOIS Summer School, I took part in practical sessions on Python, frontend development, cloud, DevOps, testing, AI, cybersecurity and Agile.",
     year: "2026",
     category: "Training",
   },
@@ -62,9 +62,9 @@ export const achievements: Achievement[] = [
     id: 6,
     title: "Database and SQL Coursework",
     shortDescription:
-      "Studied relational databases and developed a full-stack MySQL application.",
+      "University coursework in relational databases and SQL.",
     fullDescription:
-      "Completed university coursework focused on relational database design, SQL queries, primary and foreign keys, joins, aggregation and CRUD operations using MySQL. Applied these concepts in an automotive service management application.",
+      "I studied database design, SQL queries, keys, joins, aggregation and CRUD operations in MySQL. I used these concepts in my automotive service application.",
     year: "2026",
     category: "Databases",
   },
@@ -72,10 +72,20 @@ export const achievements: Achievement[] = [
     id: 7,
     title: "Electronics and Telecommunications Engineering",
     shortDescription:
-      "Pursuing a bachelor's degree at POLITEHNICA Bucharest.",
+      "Second-year bachelor's student, preparing to start my third year.",
     fullDescription:
-      "Studying Electronics, Telecommunications and Information Technology at the National University of Science and Technology POLITEHNICA Bucharest. Relevant areas include programming, databases, embedded systems, digital circuits and web development.",
+      "I study Electronics, Telecommunications and Information Technology. My courses include programming, databases, embedded systems and digital circuits.",
     year: "2024 – 2028",
     category: "Education",
+  },
+  {
+    id: 8,
+    title: "C and C++ Programming",
+    shortDescription:
+      "University coursework in C, C++, data structures and object-oriented programming.",
+    fullDescription:
+      "Through university laboratories, I worked with C and C++, pointers, dynamic memory, files, data structures and algorithms. I also studied object-oriented programming concepts such as classes, inheritance, polymorphism and exceptions.",
+    year: "2024 – 2026",
+    category: "Programming",
   },
 ];

@@ -1,16 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import './LayoutSwitcher.css';
+import "./LayoutSwitcher.css";
 
-type LayoutMode = 'professional' | 'showcase' | 'retro';
+type LayoutMode = "clean" | "editorial" | "mono";
 
-const STORAGE_KEY = 'portfolio_layout';
+const STORAGE_KEY = "portfolio_layout";
 
-const layoutOptions: LayoutMode[] = [
-  'professional',
-  'showcase',
-  'retro',
-];
+const layoutOptions: LayoutMode[] = ["clean", "editorial", "mono"];
 
 function getSavedLayout(): LayoutMode {
   const savedLayout = localStorage.getItem(STORAGE_KEY);
@@ -19,7 +15,7 @@ function getSavedLayout(): LayoutMode {
     return savedLayout as LayoutMode;
   }
 
-  return 'professional';
+  return "clean";
 }
 
 function LayoutSwitcher() {
@@ -27,27 +23,22 @@ function LayoutSwitcher() {
 
   useEffect(() => {
     document.body.classList.remove(
-      'layout-professional',
-      'layout-showcase',
-      'layout-retro',
+      "layout-clean",
+      "layout-editorial",
+      "layout-mono",
     );
 
     document.body.classList.add(`layout-${mode}`);
     localStorage.setItem(STORAGE_KEY, mode);
   }, [mode]);
 
-  function handleLayoutChange(
-    event: React.ChangeEvent<HTMLSelectElement>,
-  ) {
+  function handleLayoutChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setMode(event.target.value as LayoutMode);
   }
 
   return (
     <div className="layout-switcher">
-      <label
-        htmlFor="layout-select"
-        className="layout-switcher-label"
-      >
+      <label htmlFor="layout-select" className="layout-switcher-label">
         Layout
       </label>
 
@@ -57,9 +48,9 @@ function LayoutSwitcher() {
         value={mode}
         onChange={handleLayoutChange}
       >
-        <option value="professional">Professional</option>
-        <option value="showcase">Showcase</option>
-        <option value="retro">Retro</option>
+        <option value="clean">Clean</option>
+        <option value="editorial">Editorial</option>
+        <option value="mono">Mono</option>
       </select>
     </div>
   );

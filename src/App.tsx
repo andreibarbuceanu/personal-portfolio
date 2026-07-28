@@ -1,5 +1,3 @@
-import './App.css';
-
 import Navbar from './components/layout/Navbar';
 import Contact from './components/sections/Contact';
 import CVSection from './components/sections/CVSection';

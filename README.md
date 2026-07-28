@@ -1,30 +1,36 @@
 # Personal Portfolio
 
-This is my personal portfolio website, built with React, TypeScript, and Vite. It presents my software projects, technical skills, certifications, CV, GitHub activity, and contact information.
+A responsive personal portfolio built with React, TypeScript and Vite. The site presents my projects, achievements, CV, recent GitHub activity and contact information.
 
 ## Live Demo
 
-https://andreibarbuceanu.github.io/personal-portfolio/
+[View the portfolio](https://andreibarbuceanu.github.io/personal-portfolio/)
 
 ## Screenshots
 
-![Home page](screenshots/home.png)
+### Clean
 
-![Projects section](screenshots/projects.png)
+![Clean theme](public/screenshots/clean-theme.jpg)
 
-![CV and achievements](screenshots/cv-achievements.png)
+### Editorial
 
-![Alternate layout](screenshots/alternate-layout.png)
+![Editorial theme](public/screenshots/editorial-theme.jpg)
+
+### Mono
+
+![Mono theme](public/screenshots/mono-theme.jpg)
 
 ## Features
 
-- Responsive interface
-- Multiple layout themes
-- Project showcase
+- Responsive layout for desktop and mobile
+- Three selectable themes: Clean, Editorial and Mono
+- Theme preference saved in `localStorage`
+- Project cards with detailed modals
+- Achievements carousel with automatic navigation
 - Downloadable CV
-- Certifications and achievements
-- GitHub activity
-- Contact section
+- Recent activity loaded from the GitHub API
+- Cached GitHub activity when the API is unavailable
+- Keyboard-accessible cards and modals
 
 ## Technologies
 
@@ -32,32 +38,51 @@ https://andreibarbuceanu.github.io/personal-portfolio/
 - TypeScript
 - Vite
 - CSS
+- GitHub REST API
 - GitHub Pages
 
 ## Project Structure
 
 ```text
 src/
-  assets/              Images and other local assets
+  assets/              Profile image
   components/
-    layout/            Navigation and layout switcher
+    layout/            Navbar and theme switcher
     sections/          Portfolio page sections
-  data/                Project and achievement data
-screenshots/           Portfolio screenshots
+  data/                Projects and achievements
+  App.tsx               Main page structure
+  index.css             Global styles and theme variables
+
+public/
+  cv/                   Downloadable CV
 ```
 
 ## Getting Started
+
+Clone the repository and install the dependencies:
 
 ```bash
 git clone https://github.com/andreibarbuceanu/personal-portfolio.git
 cd personal-portfolio
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-## Future Improvements
+## Available Commands
 
-- Improve accessibility
-- Add more project case studies
-- Improve performance
-- Refine the design
+```bash
+npm run dev       # Start the development server
+npm run build     # Create a production build
+npm run lint      # Check the code with ESLint
+npm run preview   # Preview the production build locally
+npm run deploy    # Deploy the dist folder to GitHub Pages
+```
+
+## Deployment
+
+The project is configured for GitHub Pages. Before deploying, the `predeploy` script creates a fresh production build automatically.

@@ -4,55 +4,71 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--nav-bg, rgba(15, 17, 23, 0.95));
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--nav-border, #30363d);
-  transition: background-color var(--layout-transition) ease-in-out, border-color var(--layout-transition) ease-in-out, box-shadow var(--layout-transition) ease-in-out;
+  transition: background-color var(--layout-transition) ease;
 }
 
 .navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 1100px;
+  height: 60px;
   margin: 0 auto;
   padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
 }
 
 .navbar-menu {
   display: flex;
-  list-style: none;
   gap: 32px;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .navbar-link {
-  color: var(--muted-text, #8b949e);
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color var(--layout-transition) ease-in-out;
   position: relative;
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color var(--layout-transition) ease-in-out;
 }
 
-.navbar-link:hover {
-  color: var(--accent-color, #58a6ff);
+.navbar-link:hover,
+.navbar-link:focus-visible {
+  color: var(--accent-color);
 }
 
 .navbar-link::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
+  bottom: -4px;
   width: 0;
   height: 2px;
-  background: var(--accent-color, #58a6ff);
+  background: var(--accent-color);
   transition: width 0.3s ease;
 }
 
-.navbar-link:hover::after {
+.navbar-link:hover::after,
+.navbar-link:focus-visible::after {
   width: 100%;
+}
+
+.navbar-utilities {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 18px;
+}
+
+@media (max-width: 900px) {
+  .navbar-container {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 768px) {
@@ -65,15 +81,20 @@
   }
 }
 
-.navbar-utilities {
-  margin-left: 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .navbar-container {
-    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .navbar-menu {
+    gap: 10px;
+  }
+
+  .navbar-link {
+    font-size: 0.75rem;
+  }
+
+  .navbar-utilities {
+    margin-left: 8px;
   }
 }
