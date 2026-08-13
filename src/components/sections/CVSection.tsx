@@ -60,9 +60,10 @@ function CVSection() {
   return (
     <section className="cv-section" id="cv">
       <div className="cv-header">
-        <h2>Education & Achievements</h2>
+        <h2>Education, Training & Certifications</h2>
         <p>
-          A few milestones from university, courses and personal learning.
+          My academic background, technical coursework and professional
+          development.
         </p>
       </div>
 

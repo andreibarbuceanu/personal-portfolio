@@ -12,21 +12,11 @@ export const achievements: Achievement[] = [
     id: 1,
     title: "Electronics and Telecommunications Engineering",
     shortDescription:
-      "Second-year bachelor's student, preparing to start my third year.",
+      "Bachelor's student in Electronics, Telecommunications and Information Technology at POLITEHNICA Bucharest.",
     fullDescription:
       "I study Electronics, Telecommunications and Information Technology at POLITEHNICA Bucharest. By the end of my second year, my coursework has included Signals and Systems, Electronic Devices, Fundamental Electronic Circuits, Digital Integrated Circuits, Microprocessor Architecture, Microcontrollers, Databases, and Data Structures and Algorithms.",
     year: "2024 – 2028",
     category: "Education",
-  },
-  {
-    id: 2,
-    title: "CAD Techniques for Electronics",
-    shortDescription:
-      "University coursework focused on schematic design and the main stages of PCB development.",
-    fullDescription:
-      "During my second year at ETTI, I studied the main stages involved in designing electronic modules using CAD tools. In the laboratory, I worked with OrCAD Capture, OrCAD PCB Designer and Cadence Allegro to create electronic schematics, manage component libraries, design footprints, place components and route PCB connections. I also learned about design rule checks, THT and SMT components, and preparing a PCB project for manufacturing.",
-    year: "2026",
-    category: "Electronics",
   },
   {
     id: 3,
@@ -49,8 +39,18 @@ export const achievements: Achievement[] = [
     category: "Databases",
   },
   {
+    id: 2,
+    title: "CAD Techniques for Electronics",
+    shortDescription:
+      "University coursework focused on schematic design and the main stages of PCB development.",
+    fullDescription:
+      "During my second year at ETTI, I studied the main stages involved in designing electronic modules using CAD tools. In the laboratory, I worked with OrCAD Capture, OrCAD PCB Designer and Cadence Allegro to create electronic schematics, manage component libraries, design footprints, place components and route PCB connections. I also learned about design rule checks, THT and SMT components, and preparing a PCB project for manufacturing.",
+    year: "2026",
+    category: "Electronics",
+  },
+  {
     id: 5,
-    title: "Web Programming Fundamentals",
+    title: "Web Programming 101 – Fundamentals",
     shortDescription:
       "Cisco Networking Academy coursework focused on building interactive web pages with HTML, CSS and JavaScript.",
     fullDescription:
@@ -60,7 +60,7 @@ export const achievements: Achievement[] = [
   },
   {
     id: 6,
-    title: "Modern Web Application Development",
+    title: "Web Programming 102 – Modern Web Applications",
     shortDescription:
       "Cisco Networking Academy coursework focused on building structured and reusable web applications.",
     fullDescription:
