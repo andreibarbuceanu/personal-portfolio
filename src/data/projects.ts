@@ -42,6 +42,21 @@ const projects: Project[] = [
     ],
   },
   {
+    title: "Collaborative Social Networking Mobile Application",
+    description:
+      "A team-based mobile application currently being developed during the VOIS Summer School. The current version includes authentication, user profiles, friend search and requests, and a mutually confirmed manager role. The project follows an Agile workflow with rotating responsibilities across frontend, backend, database, testing and design.",
+    url: "",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Jest",
+      "Agile",
+    ],
+  },
+  {
     title: "QR Code Generator & Scanner",
     description:
       "A modular Python desktop application for generating and scanning QR codes through a Tkinter interface. It can decode codes from image files or a live webcam feed, preview and save generated QR images, open decoded links, maintain a session history and share generated codes by email.",
