@@ -7,7 +7,7 @@ function Hero() {
     <section id="hero" className="hero">
       <div className="hero-content">
         <span className="hero-tagline">
-          SOFTWARE DEVELOPMENT • ENGINEERING STUDENT
+          ENGINEERING STUDENT • SOFTWARE DEVELOPMENT
         </span>
 
         <img
