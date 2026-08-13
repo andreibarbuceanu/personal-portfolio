@@ -9,14 +9,17 @@ function Contact() {
       </div>
 
       <div className="contact-grid">
+        <a href="tel:+40771642396" className="contact-card">
+          <strong>Phone</strong>
+          <span className="contact-desc">+40 771 642 396</span>
+        </a>
+
         <a
-          href="https://github.com/andreibarbuceanu"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:andrei_barbuceanu@yahoo.com"
           className="contact-card"
         >
-          <strong>GitHub</strong>
-          <span className="contact-desc">Projects and source code</span>
+          <strong>Email</strong>
+          <span className="contact-desc">andrei_barbuceanu@yahoo.com</span>
         </a>
 
         <a
@@ -30,16 +33,13 @@ function Contact() {
         </a>
 
         <a
-          href="mailto:andrei_barbuceanu@yahoo.com"
+          href="https://github.com/andreibarbuceanu"
+          target="_blank"
+          rel="noopener noreferrer"
           className="contact-card"
         >
-          <strong>Email</strong>
-          <span className="contact-desc">andrei_barbuceanu@yahoo.com</span>
-        </a>
-
-        <a href="tel:+40771642396" className="contact-card">
-          <strong>Phone</strong>
-          <span className="contact-desc">+40 771 642 396</span>
+          <strong>GitHub</strong>
+          <span className="contact-desc">Projects and source code</span>
         </a>
       </div>
     </section>
