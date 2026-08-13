@@ -49,22 +49,6 @@
   transform: translateY(-4px);
 }
 
-.project-icon {
-  width: 100%;
-  margin-top: 18px;
-  margin-bottom: 12px;
-  color: var(--accent-color);
-  font-size: 4rem;
-  line-height: 1;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover .project-icon,
-.project-card:focus-visible .project-icon {
-  transform: scale(1.05);
-}
-
 .project-body {
   padding: 18px;
 }
@@ -153,12 +137,6 @@
 .project-modal-description {
   color: var(--muted-text);
   line-height: 1.6;
-}
-
-.project-modal-icon {
-  margin-bottom: 14px;
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .project-modal-close {

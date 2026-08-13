@@ -2,17 +2,6 @@ import { useEffect, useState } from "react";
 import projects, { type Project } from "../../data/projects";
 import "./Projects.css";
 
-function getProjectIcon(title: string) {
-  if (title.includes("Task Management")) return "📋";
-  if (title.includes("Blackjack")) return "🎮";
-  if (title.includes("QR Code")) return "▣";
-  if (title.includes("Automotive Service")) return "🚗";
-  if (title.includes("Personal Portfolio")) return "💻";
-  if (title.includes("Inductive Metal Detector")) return "🧲";
-
-  return "📁";
-}
-
 function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
@@ -65,10 +54,6 @@ function Projects() {
               }
             }}
           >
-            <div className="project-icon" aria-hidden="true">
-              {getProjectIcon(project.title)}
-            </div>
-
             <div className="project-body">
               <h3>{project.title}</h3>
 
@@ -114,10 +99,6 @@ function Projects() {
             >
               ×
             </button>
-
-            <div className="project-modal-icon" aria-hidden="true">
-              {getProjectIcon(selected.title)}
-            </div>
 
             <h3 id="project-modal-title">{selected.title}</h3>
 
