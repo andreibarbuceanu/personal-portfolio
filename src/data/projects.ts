@@ -7,64 +7,70 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: 'Task Management Web Application',
+    title: "Task Management Web Application",
     description:
-      'A task manager built with HTML, CSS and JavaScript. Users can add, edit, complete, delete and filter tasks, while LocalStorage keeps them saved between visits.',
-    url: 'https://github.com/andreibarbuceanu/todo-web-app',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
+      "A responsive to-do application built with HTML, CSS and vanilla JavaScript. Users can create tasks, mark them as completed, filter them by status and remove completed items. Task data is stored in LocalStorage and restored when the application is reopened.",
+    url: "https://github.com/andreibarbuceanu/todo-web-app",
+    technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
   },
   {
-    title: 'Personal Portfolio Website',
+    title: "Personal Portfolio Website",
     description:
-      'This portfolio brings together my projects, achievements, recent GitHub activity and CV. I built it with React and TypeScript and added three themes that can be changed at any time.',
-    url: 'https://github.com/andreibarbuceanu/personal-portfolio',
+      "A responsive portfolio built with React and TypeScript to present my skills, projects, education, certifications and recent GitHub activity. It includes three selectable layouts, persistent user preferences, interactive project modals and a downloadable CV.",
+    url: "https://github.com/andreibarbuceanu/personal-portfolio",
     technologies: [
-      'React',
-      'TypeScript',
-      'Vite',
-      'GitHub API',
-      'LocalStorage',
-      'GitHub Pages',
+      "React",
+      "TypeScript",
+      "Vite",
+      "GitHub API",
+      "LocalStorage",
+      "GitHub Pages",
     ],
   },
   {
-    title: 'Automotive Service Management Web Application',
+    title: "Automotive Service Management Web Application",
     description:
-      'A full-stack app for keeping track of clients, cars, invoices, parts and stock in an automotive service. It uses a React frontend, an Express API and a MySQL database.',
-    url: 'https://github.com/andreibarbuceanu/automotive-service-management-database-project',
+      "An academic full-stack application for managing the workflow of an automotive service. It provides separate manager and client dashboards for organizing customers, vehicles, spare parts, stock and invoices, supported by an Express REST API and a relational MySQL database.",
+    url: "https://github.com/andreibarbuceanu/automotive-service-management-database-project",
     technologies: [
-      'React',
-      'TypeScript',
-      'Node.js',
-      'Express.js',
-      'MySQL',
-      'REST API',
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "REST API",
     ],
   },
   {
-    title: 'QR Code Generator & Scanner',
+    title: "QR Code Generator & Scanner",
     description:
-      'A Python desktop app that creates QR codes and scans them from images or a webcam. It also keeps a session history and can send generated codes by email.',
-    url: 'https://github.com/andreibarbuceanu/andreibarbuceanu-qr-code-app',
-    technologies: ['Python', 'Tkinter', 'OpenCV', 'QRCode', 'SMTP'],
+      "A modular Python desktop application for generating and scanning QR codes through a Tkinter interface. It can decode codes from image files or a live webcam feed, preview and save generated QR images, open decoded links, maintain a session history and share generated codes by email.",
+    url: "https://github.com/andreibarbuceanu/andreibarbuceanu-qr-code-app",
+    technologies: ["Python", "Tkinter", "OpenCV", "QRCode", "Pillow", "SMTP"],
   },
   {
-    title: 'Blackjack Game on ESP32',
+    title: "Blackjack Game on ESP32",
     description:
-      'A small Blackjack game built on an ESP32. The cards and game state are shown on an OLED display, and the game is controlled with physical buttons.',
-    url: '',
-    technologies: ['ESP32', 'C++', 'Arduino IDE', 'OLED Display'],
-  },
-  {
-    title: 'Inductive Metal Detector',
-    description:
-      'An analog electronics project that uses inductive sensing to detect metal objects. I worked on the circuit, operational amplifiers, signal testing and troubleshooting.',
-    url: '',
+      "An embedded Blackjack game developed in C++ for an ESP32 microcontroller. The application implements the game logic, displays cards and player status on an OLED screen, and uses physical buttons for player input, combining software development with basic hardware integration.",
+    url: "",
     technologies: [
-      'Analog Electronics',
-      'Operational Amplifiers',
-      'Circuit Design',
-      'Signal Analysis',
+      "ESP32",
+      "C++",
+      "Arduino IDE",
+      "OLED Display",
+      "Embedded Systems",
+    ],
+  },
+  {
+    title: "Inductive Metal Detector",
+    description:
+      "An analog electronics project that detects nearby metal objects through changes in an inductive sensing circuit. I worked on assembling and testing the circuit, analysing its signals and using operational amplifiers to obtain a reliable response. The project also involved practical troubleshooting and adjustments based on measurement results.",
+    url: "",
+    technologies: [
+      "Analog Electronics",
+      "Operational Amplifiers",
+      "Circuit Design",
+      "Signal Analysis",
     ],
   },
 ];
