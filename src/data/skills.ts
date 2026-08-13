@@ -40,6 +40,16 @@ const skillCategories: SkillCategory[] = [
       "MATLAB",
     ],
   },
+  {
+    title: "Professional Skills",
+    skills: [
+      "Agile",
+      "Analytical Thinking",
+      "Problem Solving",
+      "Attention to Detail",
+      "Teamwork",
+    ],
+  },
 ];
 
 export default skillCategories;
