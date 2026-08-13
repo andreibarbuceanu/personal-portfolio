@@ -14,18 +14,18 @@ const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
   },
   {
-    title: 'Blackjack Game on ESP32',
+    title: 'Personal Portfolio Website',
     description:
-      'A small Blackjack game built on an ESP32. The cards and game state are shown on an OLED display, and the game is controlled with physical buttons.',
-    url: '',
-    technologies: ['ESP32', 'C++', 'Arduino IDE', 'OLED Display'],
-  },
-  {
-    title: 'QR Code Generator & Scanner',
-    description:
-      'A Python desktop app that creates QR codes and scans them from images or a webcam. It also keeps a session history and can send generated codes by email.',
-    url: 'https://github.com/andreibarbuceanu/andreibarbuceanu-qr-code-app',
-    technologies: ['Python', 'Tkinter', 'OpenCV', 'QRCode', 'SMTP'],
+      'This portfolio brings together my projects, achievements, recent GitHub activity and CV. I built it with React and TypeScript and added three themes that can be changed at any time.',
+    url: 'https://github.com/andreibarbuceanu/personal-portfolio',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'GitHub API',
+      'LocalStorage',
+      'GitHub Pages',
+    ],
   },
   {
     title: 'Automotive Service Management Web Application',
@@ -42,18 +42,18 @@ const projects: Project[] = [
     ],
   },
   {
-    title: 'Personal Portfolio Website',
+    title: 'QR Code Generator & Scanner',
     description:
-      'This portfolio brings together my projects, achievements, recent GitHub activity and CV. I built it with React and TypeScript and added three themes that can be changed at any time.',
-    url: 'https://github.com/andreibarbuceanu/personal-portfolio',
-    technologies: [
-      'React',
-      'TypeScript',
-      'Vite',
-      'GitHub API',
-      'LocalStorage',
-      'GitHub Pages',
-    ],
+      'A Python desktop app that creates QR codes and scans them from images or a webcam. It also keeps a session history and can send generated codes by email.',
+    url: 'https://github.com/andreibarbuceanu/andreibarbuceanu-qr-code-app',
+    technologies: ['Python', 'Tkinter', 'OpenCV', 'QRCode', 'SMTP'],
+  },
+  {
+    title: 'Blackjack Game on ESP32',
+    description:
+      'A small Blackjack game built on an ESP32. The cards and game state are shown on an OLED display, and the game is controlled with physical buttons.',
+    url: '',
+    technologies: ['ESP32', 'C++', 'Arduino IDE', 'OLED Display'],
   },
   {
     title: 'Inductive Metal Detector',
