@@ -13,6 +13,17 @@ const skillCategories: SkillCategory[] = [
     skills: ["HTML", "CSS", "React", "Redux", "DOM Manipulation"],
   },
   {
+    title: "Mobile Development",
+    skills: [
+      "React Native",
+      "Expo",
+      "Expo Router",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Firebase Storage",
+    ],
+  },
+  {
     title: "Electronics",
     skills: [
       "Digital Electronics",
