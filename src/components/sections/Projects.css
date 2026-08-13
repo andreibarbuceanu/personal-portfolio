@@ -92,14 +92,6 @@
   padding-bottom: 32px;
 }
 
-.tech-badge {
-  padding: 6px 10px;
-  color: var(--muted-text);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 0.85rem;
-}
-
 .project-modal-overlay {
   position: fixed;
   top: 0;
