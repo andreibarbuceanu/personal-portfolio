@@ -52,11 +52,6 @@
   gap: 8px;
 }
 
-.skill-category:not(:last-child) .skill-list {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 @media (max-width: 900px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
