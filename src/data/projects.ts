@@ -7,24 +7,18 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Task Management Web Application",
+    title: "Collaborative Social Networking Mobile Application",
     description:
-      "A responsive to-do application built with HTML, CSS and vanilla JavaScript. Users can create tasks, mark them as completed, filter them by status and remove completed items. Task data is stored in LocalStorage and restored when the application is reopened.",
-    url: "https://github.com/andreibarbuceanu/todo-web-app",
-    technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
-  },
-  {
-    title: "Personal Portfolio Website",
-    description:
-      "A responsive portfolio built with React and TypeScript to present my skills, projects, education, certifications and recent GitHub activity. It includes three selectable layouts, persistent user preferences, interactive project modals and a downloadable CV.",
-    url: "https://github.com/andreibarbuceanu/personal-portfolio",
+      "A team-based mobile application currently being developed during the VOIS Summer School. The current version includes authentication, user profiles, friend search and requests, and a mutually confirmed manager role. The project follows an Agile workflow with rotating responsibilities across frontend, backend, database, testing and design.",
+    url: "https://github.com/alexandrauntea/SetItUp",
     technologies: [
-      "React",
+      "React Native",
       "TypeScript",
-      "Vite",
-      "GitHub API",
-      "LocalStorage",
-      "GitHub Pages",
+      "Expo",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Jest",
+      "Agile",
     ],
   },
   {
@@ -42,19 +36,25 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Collaborative Social Networking Mobile Application",
+    title: "Personal Portfolio Website",
     description:
-      "A team-based mobile application currently being developed during the VOIS Summer School. The current version includes authentication, user profiles, friend search and requests, and a mutually confirmed manager role. The project follows an Agile workflow with rotating responsibilities across frontend, backend, database, testing and design.",
-    url: "https://github.com/alexandrauntea/SetItUp",
+      "A responsive portfolio built with React and TypeScript to present my skills, projects, education, certifications and recent GitHub activity. It includes three selectable layouts, persistent user preferences, interactive project modals and a downloadable CV.",
+    url: "https://github.com/andreibarbuceanu/personal-portfolio",
     technologies: [
-      "React Native",
+      "React",
       "TypeScript",
-      "Expo",
-      "Firebase Authentication",
-      "Cloud Firestore",
-      "Jest",
-      "Agile",
+      "Vite",
+      "GitHub API",
+      "LocalStorage",
+      "GitHub Pages",
     ],
+  },
+  {
+    title: "Task Management Web Application",
+    description:
+      "A responsive to-do application built with HTML, CSS and vanilla JavaScript. Users can create tasks, mark them as completed, filter them by status and remove completed items. Task data is stored in LocalStorage and restored when the application is reopened.",
+    url: "https://github.com/andreibarbuceanu/todo-web-app",
+    technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
   },
   {
     title: "QR Code Generator & Scanner",
@@ -67,7 +67,7 @@ const projects: Project[] = [
     title: "Blackjack Game on ESP32",
     description:
       "An embedded Blackjack game developed in C++ for an ESP32 microcontroller. The application implements the game logic, displays cards and player status on an OLED screen, and uses physical buttons for player input, combining software development with basic hardware integration.",
-    url: "",
+    url: "https://github.com/andreibarbuceanu/ESP32-Blackjack",
     technologies: [
       "ESP32",
       "C++",
