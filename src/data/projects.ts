@@ -7,17 +7,20 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Collaborative Social Networking Mobile Application",
+    title: "SetItUp – Social Networking Mobile App",
     description:
-      "A team-based mobile application currently being developed during the VOIS Summer School. The current version includes authentication, user profiles, friend search and requests, and a mutually confirmed manager role. The project follows an Agile workflow with rotating responsibilities across frontend, backend, database, testing and design.",
+      "A collaborative social application developed during the VOIS Summer School of Engineering. SetItUp allows trusted friends to discover and connect compatible people on behalf of the users they manage. The app includes authentication, public and private profiles with photo galleries, friend management, manager assignment, filtered recommendations, likes and dislikes, automatic matches, real-time conversations, blocking controls, and responsive mobile and web interfaces. The project was developed using a role-rotation approach across software development, design, QA, DevOps, Agile practices, cybersecurity and AI.",
     url: "https://github.com/alexandrauntea/SetItUp",
     technologies: [
       "React Native",
       "TypeScript",
       "Expo",
+      "Expo Router",
       "Firebase Authentication",
       "Cloud Firestore",
+      "Firebase Storage",
       "Jest",
+      "React Native Testing Library",
       "Agile",
     ],
   },
