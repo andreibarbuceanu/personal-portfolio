@@ -19,15 +19,12 @@ function Hero() {
         <h1>Andrei Barbuceanu</h1>
 
         <p className="hero-description">
-          I’m a second-year Electronics, Telecommunications and Information
-          Technology student, preparing to begin my third year, with a primary
-          focus on software development. I build web and mobile applications
-          with React, TypeScript, and React Native using Expo, with additional
-          experience in Node.js, REST APIs, SQL, and Python. My ETTI background
-          includes C/C++, microcontrollers, and digital and analog electronics,
-          giving me a broader understanding of how software connects with
-          hardware. I enjoy turning ideas into practical, well-structured
-          applications and strengthening my skills through real projects.
+          I'm an Electronics, Telecommunications and Information Technology
+          student focused on software development. I enjoy building practical
+          web and mobile applications using React, TypeScript and React Native,
+          while also exploring backend development, APIs and databases. I like
+          turning ideas into clean, functional projects and continuously
+          improving my skills through hands-on work.
         </p>
 
         <a href="#projects" className="cta-button">
