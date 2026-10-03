@@ -69,14 +69,14 @@ export const achievements: Achievement[] = [
     category: "Web Development",
   },
   {
-    id: 7,
-    title: "VOIS Summer School of Software Engineering",
-    shortDescription:
-      "An industry-focused program that broadened my understanding of software development and its different career paths.",
-    fullDescription:
-      "The VOIS Summer School gave me the opportunity to explore several areas of the software industry beyond what I had previously studied at university. Through practical sessions on Python, frontend development, cloud, DevOps, software testing, artificial intelligence and cybersecurity, I gained a clearer understanding of how these fields connect throughout the software development lifecycle. Working with industry professionals and learning about Agile practices also helped me better understand how software teams collaborate on real projects and gave me a broader perspective on the directions I could pursue in my career.",
-    year: "2026",
-    category: "Training",
+   id: 7,
+   title: "VOIS Summer School of Software Engineering",
+   shortDescription:
+     "An industry-focused software engineering program combining technical workshops, Agile teamwork and the development of a collaborative React Native application.",
+   fullDescription:
+     "The VOIS Summer School of Software Engineering provided hands-on exposure to several areas of modern software development, including Python, frontend development, cloud technologies, DevOps, software testing, artificial intelligence and cybersecurity. Alongside the technical workshops, I worked as part of a team on SetItUp, a collaborative React Native application developed using Agile practices and rotating responsibilities across development, testing, design and other project roles. The program helped me better understand how different technologies and disciplines connect throughout the software development lifecycle and how software teams collaborate on real-world projects.",
+   year: "2026",
+   category: "Training",
   },
   {
     id: 8,
