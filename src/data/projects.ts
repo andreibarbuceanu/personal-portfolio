@@ -25,17 +25,35 @@ const projects: Project[] = [
     ],
   },
   {
+   title: "Website Technologies Scraper",
+   description:
+     "A Python-based website analysis tool developed for the Veridion internship challenge. It retrieves web pages, parses HTML script references, resolves relative URLs and detects technologies such as WordPress and jQuery using evidence-based rules. The project also handles HTTP and network errors and exports structured analysis results to JSON.",
+   url: "https://github.com/andreibarbuceanu/website-tech-scraper",
+   technologies: [
+     "Python",
+     "urllib",
+     "HTMLParser",
+     "HTTP",
+     "JSON",
+     "Web Scraping",
+   ],
+ },
+  {
     title: "Automotive Service Management Web Application",
     description:
       "An academic full-stack application for managing the workflow of an automotive service. It provides separate manager and client dashboards for organizing customers, vehicles, spare parts, stock and invoices, supported by an Express REST API and a relational MySQL database.",
     url: "https://github.com/andreibarbuceanu/automotive-service-management-database-project",
     technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "MySQL",
-      "REST API",
+     "React",
+     "TypeScript",
+     "Vite",
+     "Axios",
+     "React Router",
+     "Tailwind CSS",
+     "Node.js",
+     "Express.js",
+     "MySQL",
+     "REST API",
     ],
   },
   {
@@ -66,19 +84,19 @@ const projects: Project[] = [
     url: "https://github.com/andreibarbuceanu/andreibarbuceanu-qr-code-app",
     technologies: ["Python", "Tkinter", "OpenCV", "QRCode", "Pillow", "SMTP"],
   },
-  {
-    title: "Blackjack Game on ESP32",
-    description:
-      "An embedded Blackjack game developed in C++ for an ESP32 microcontroller. The application implements the game logic, displays cards and player status on an OLED screen, and uses physical buttons for player input, combining software development with basic hardware integration.",
-    url: "https://github.com/andreibarbuceanu/ESP32-Blackjack",
-    technologies: [
-      "ESP32",
-      "C++",
-      "Arduino IDE",
-      "OLED Display",
-      "Embedded Systems",
-    ],
-  },
+ {
+   title: "Blackjack Game on ESP32",
+   description:
+     "An embedded Blackjack game developed in C++ for an ESP32 microcontroller. The application implements hit, stand and reset controls, displays player and dealer scores on an OLED screen, and uses LEDs and a buzzer for visual and audio feedback.",
+   url: "https://github.com/andreibarbuceanu/ESP32-Blackjack",
+   technologies: [
+     "ESP32",
+     "C++",
+     "Arduino IDE",
+     "OLED Display",
+     "Embedded Systems",
+   ],
+ },
   {
     title: "Inductive Metal Detector",
     description:
