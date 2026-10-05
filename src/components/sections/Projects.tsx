@@ -34,8 +34,8 @@ function Projects() {
       <div className="projects-header">
         <h2>My Projects</h2>
         <p>
-          Some of the projects I have worked on while learning and
-          experimenting.
+          Turning ideas into practical solutions through code and
+          experimentation.
         </p>
       </div>
 
