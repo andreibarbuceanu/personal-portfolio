@@ -29,9 +29,11 @@
 }
 
 .achievement-card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 520px;
-  min-height: 220px;
+  height: 280px;
   padding: 28px;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -66,7 +68,11 @@
   line-height: 1.6;
 }
 
-.achievement-card small,
+.achievement-card small {
+  margin-top: auto;
+  color: var(--text-color);
+}
+
 .achievement-modal small {
   color: var(--text-color);
 }

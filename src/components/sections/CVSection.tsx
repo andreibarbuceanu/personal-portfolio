@@ -12,14 +12,17 @@ function CVSection() {
   };
 
   useEffect(() => {
+    if (selectedAchievement) {
+      return;
+    }
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === achievements.length - 1 ? 0 : prevIndex + 1
+        prevIndex === achievements.length - 1 ? 0 : prevIndex + 1,
       );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, selectedAchievement]);
 
   useEffect(() => {
     if (!selectedAchievement) {
@@ -43,13 +46,13 @@ function CVSection() {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === achievements.length - 1 ? 0 : prevIndex + 1
+      prevIndex === achievements.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const previousSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? achievements.length - 1 : prevIndex - 1
+      prevIndex === 0 ? achievements.length - 1 : prevIndex - 1,
     );
   };
 
