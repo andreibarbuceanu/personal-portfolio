@@ -1,0 +1,23 @@
+.section-header {
+  margin-bottom: var(--section-gap);
+  text-align: center;
+}
+
+.section-header h2 {
+  margin-bottom: calc(var(--section-gap) / 2);
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.section-header p {
+  color: var(--muted-text);
+}
+
+.section-header-actions {
+  margin-top: 16px;
+}
+
+.section-header--compact h2 {
+  margin-bottom: 6px;
+  font-size: 1.75rem;
+}

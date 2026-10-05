@@ -5,21 +5,6 @@
   border-top: 1px solid var(--border-color);
 }
 
-.skills-header {
-  margin-bottom: var(--section-gap);
-  text-align: center;
-}
-
-.skills-header h2 {
-  margin-bottom: calc(var(--section-gap) / 2);
-  color: var(--text-color);
-  font-size: 2rem;
-}
-
-.skills-header p {
-  color: var(--muted-text);
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

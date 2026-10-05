@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import projects, { type Project } from "../../data/projects";
+import Modal from "../ui/Modal";
+import SectionHeader from "../ui/SectionHeader";
+import TechBadge from "../ui/TechBadge";
 import "./Projects.css";
 
 function Projects() {
@@ -9,35 +12,12 @@ function Projects() {
     setSelected(null);
   };
 
-  useEffect(() => {
-    if (!selected) {
-      return;
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closeModal();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [selected]);
-
   return (
     <section id="projects" className="projects-section">
-      <div className="projects-header">
-        <h2>My Projects</h2>
-        <p>
-          Turning ideas into practical solutions through code and
-          experimentation.
-        </p>
-      </div>
+      <SectionHeader
+        title="My Projects"
+        description="Turning ideas into practical solutions through code and experimentation."
+      />
 
       <div className="projects-grid">
         {projects.map((project) => (
@@ -62,12 +42,10 @@ function Projects() {
               {project.technologies.length > 0 && (
                 <div className="tech-list">
                   {project.technologies.map((technology) => (
-                    <span
-                      className="tech-badge"
+                    <TechBadge
                       key={`${project.title}-${technology}`}
-                    >
-                      {technology}
-                    </span>
+                      label={technology}
+                    />
                   ))}
                 </div>
               )}
@@ -79,62 +57,39 @@ function Projects() {
       </div>
 
       {selected && (
-        <div
-          className="project-modal-overlay"
-          onClick={closeModal}
-          role="presentation"
-        >
-          <div
-            className="project-modal"
-            onClick={(event) => event.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="project-modal-title"
-          >
-            <button
-              type="button"
-              className="project-modal-close"
-              onClick={closeModal}
-              aria-label="Close project details"
-            >
-              ×
-            </button>
-
-            <h3 id="project-modal-title">{selected.title}</h3>
-
-            <p className="project-modal-description">
-              {selected.fullDescription}
-            </p>
-
+        <Modal
+          ariaLabelledBy="project-modal-title"
+          closeLabel="Close project details"
+          description={selected.fullDescription}
+          details={
             <div className="modal-tech-list">
               {selected.technologies.map((technology) => (
-                <span
-                  className="tech-badge"
+                <TechBadge
                   key={`${selected.title}-${technology}`}
-                >
-                  {technology}
-                </span>
+                  label={technology}
+                />
               ))}
             </div>
-
-            <div className="modal-actions">
-              {selected.url && selected.url !== "#" ? (
-                <a
-                  href={selected.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-repository-button"
-                >
-                  View Repository
-                </a>
-              ) : (
-                <p className="repository-unavailable">
-                  Repository not available publicly.
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
+          }
+          onClose={closeModal}
+          title={selected.title}
+          actions={
+            selected.url && selected.url !== "#" ? (
+              <a
+                href={selected.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-repository-button"
+              >
+                View Repository
+              </a>
+            ) : (
+              <p className="repository-unavailable">
+                Repository not available publicly.
+              </p>
+            )
+          }
+        />
       )}
     </section>
   );

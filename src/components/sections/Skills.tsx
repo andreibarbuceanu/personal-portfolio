@@ -1,16 +1,15 @@
 import "./Skills.css";
 import skillCategories from "../../data/skills";
+import SectionHeader from "../ui/SectionHeader";
+import TechBadge from "../ui/TechBadge";
 
 function Skills() {
   return (
     <section id="skills" className="skills-section">
-      <div className="skills-header">
-        <h2>Skills</h2>
-        <p>
-          Technologies and tools I have used in university and personal
-          projects.
-        </p>
-      </div>
+      <SectionHeader
+        title="Skills"
+        description="Technologies and tools I have used in university and personal projects."
+      />
 
       <div className="skills-grid">
         {skillCategories.map((category) => (
@@ -19,9 +18,7 @@ function Skills() {
 
             <div className="skill-list">
               {category.skills.map((skill) => (
-                <span className="tech-badge" key={skill}>
-                  {skill}
-                </span>
+                <TechBadge key={skill} label={skill} />
               ))}
             </div>
           </article>

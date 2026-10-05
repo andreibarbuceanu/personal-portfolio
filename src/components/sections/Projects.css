@@ -5,21 +5,6 @@
   border-top: 1px solid var(--border-color);
 }
 
-.projects-header {
-  margin-bottom: var(--section-gap);
-  text-align: center;
-}
-
-.projects-header h2 {
-  margin-bottom: calc(var(--section-gap) / 2);
-  color: var(--text-color);
-  font-size: 2rem;
-}
-
-.projects-header p {
-  color: var(--muted-text);
-}
-
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -96,73 +81,8 @@
   padding-bottom: 32px;
 }
 
-.project-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.65);
-}
-
-.project-modal {
-  position: relative;
-  width: 100%;
-  max-width: 720px;
-  max-height: 85vh;
-  overflow-y: auto;
-  padding: 32px;
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
-}
-
-.project-modal h3 {
-  margin: 0 48px 12px 0;
-  color: var(--text-color);
-  font-size: 1.5rem;
-}
-
-.project-modal-description {
-  color: var(--muted-text);
-  line-height: 1.6;
-}
-
-.project-modal-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 38px;
-  height: 38px;
-  background: transparent;
-  color: var(--muted-text);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 1.6rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.project-modal-close:hover,
-.project-modal-close:focus-visible {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  outline: none;
-}
-
 .modal-tech-list {
-  margin-top: 16px;
-}
-
-.modal-actions {
-  margin-top: 22px;
+  margin-top: 0;
 }
 
 .project-repository-button {
@@ -193,21 +113,4 @@
     min-height: 360px;
   }
 
-  .project-modal-overlay {
-    padding: 12px;
-  }
-
-  .project-modal {
-    padding: 26px 20px 22px;
-  }
-
-  .project-modal h3 {
-    margin-right: 42px;
-    font-size: 1.3rem;
-  }
-
-  .project-modal-close {
-    top: 10px;
-    right: 10px;
-  }
 }

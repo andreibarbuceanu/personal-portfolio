@@ -5,22 +5,6 @@
   border-top: 1px solid var(--border-color);
 }
 
-.commits-header {
-  margin-bottom: var(--section-gap);
-  text-align: center;
-}
-
-.commits-header h2 {
-  margin-bottom: calc(var(--section-gap) / 2);
-  color: var(--text-color);
-  font-size: 2rem;
-}
-
-.commits-header p {
-  margin-bottom: 16px;
-  color: var(--muted-text);
-}
-
 .github-profile-btn {
   display: inline-block;
   padding: 10px 18px;

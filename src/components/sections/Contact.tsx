@@ -1,12 +1,14 @@
 import './Contact.css';
+import SectionHeader from "../ui/SectionHeader";
 
 function Contact() {
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-header">
-        <h2>Contact</h2>
-        <p>Ways to get in touch with me.</p>
-      </div>
+      <SectionHeader
+        title="Contact"
+        description="Ways to get in touch with me."
+        variant="compact"
+      />
 
       <div className="contact-grid">
         <a href="tel:+40771642396" className="contact-card">

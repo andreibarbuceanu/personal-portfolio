@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import SectionHeader from "../ui/SectionHeader";
 import "./GitHubCommits.css";
 
 interface CommitData {
@@ -128,10 +129,10 @@ function GitHubCommits() {
 
   return (
     <section id="commits" className="commits-section">
-      <div className="commits-header">
-        <h2>Recent GitHub Activity</h2>
-        <p>A snapshot of my latest work across public repositories.</p>
-
+      <SectionHeader
+        title="Recent GitHub Activity"
+        description="A snapshot of my latest work across public repositories."
+      >
         <a
           href={GITHUB_PROFILE_URL}
           target="_blank"
@@ -140,7 +141,7 @@ function GitHubCommits() {
         >
           View GitHub Profile
         </a>
-      </div>
+      </SectionHeader>
 
       {showingCached && (
         <p className="commits-loading">

@@ -5,21 +5,6 @@
   border-top: 1px solid var(--border-color);
 }
 
-.contact-header {
-  margin-bottom: var(--section-gap);
-  text-align: center;
-}
-
-.contact-header h2 {
-  margin-bottom: 6px;
-  color: var(--text-color);
-  font-size: 1.75rem;
-}
-
-.contact-header p {
-  color: var(--muted-text);
-}
-
 .contact-grid {
   display: flex;
   flex-wrap: wrap;

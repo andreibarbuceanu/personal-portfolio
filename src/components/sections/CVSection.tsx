@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { achievements, type Achievement } from "../../data/achievements";
+import Modal from "../ui/Modal";
+import SectionHeader from "../ui/SectionHeader";
 import "./CVSection.css";
 
 function CVSection() {
@@ -24,26 +26,6 @@ function CVSection() {
     return () => clearInterval(interval);
   }, [currentIndex, selectedAchievement]);
 
-  useEffect(() => {
-    if (!selectedAchievement) {
-      return;
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closeAchievementModal();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [selectedAchievement]);
-
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === achievements.length - 1 ? 0 : prevIndex + 1,
@@ -62,13 +44,10 @@ function CVSection() {
 
   return (
     <section className="cv-section" id="cv">
-      <div className="cv-header">
-        <h2>Education, Training & Certifications</h2>
-        <p>
-          My academic background, technical coursework and professional
-          development.
-        </p>
-      </div>
+      <SectionHeader
+        title="Education, Training & Certifications"
+        description="My academic background, technical coursework and professional development."
+      />
 
       <div className="carousel-container">
         <button
@@ -134,38 +113,15 @@ function CVSection() {
       </a>
 
       {selectedAchievement && (
-        <div
-          className="modal-overlay"
-          onClick={closeAchievementModal}
-          role="presentation"
-        >
-          <div
-            className="achievement-modal"
-            onClick={(e) => e.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="achievement-modal-title"
-          >
-            <button
-              type="button"
-              className="modal-close"
-              onClick={closeAchievementModal}
-              aria-label="Close achievement details"
-            >
-              ×
-            </button>
-
-            <span className="achievement-category">
-              {selectedAchievement.category}
-            </span>
-
-            <h3 id="achievement-modal-title">{selectedAchievement.title}</h3>
-
-            <p>{selectedAchievement.fullDescription}</p>
-
-            <small>{selectedAchievement.year}</small>
-          </div>
-        </div>
+        <Modal
+          ariaLabelledBy="achievement-modal-title"
+          closeLabel="Close achievement details"
+          description={selectedAchievement.fullDescription}
+          details={<small>{selectedAchievement.year}</small>}
+          eyebrow={selectedAchievement.category}
+          onClose={closeAchievementModal}
+          title={selectedAchievement.title}
+        />
       )}
     </section>
   );
