@@ -57,7 +57,7 @@ function Projects() {
             <div className="project-body">
               <h3>{project.title}</h3>
 
-              <p>{project.description}</p>
+              <p>{project.shortDescription}</p>
 
               {project.technologies.length > 0 && (
                 <div className="tech-list">
@@ -103,7 +103,7 @@ function Projects() {
             <h3 id="project-modal-title">{selected.title}</h3>
 
             <p className="project-modal-description">
-              {selected.description}
+              {selected.fullDescription}
             </p>
 
             <div className="modal-tech-list">
