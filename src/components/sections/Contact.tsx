@@ -10,8 +10,8 @@ const contactItems = [
   },
   {
     title: "Email",
-    description: "andrei_barbuceanu@yahoo.com",
-    href: "mailto:andrei_barbuceanu@yahoo.com",
+    description: "alinandreibarbuceanu@gmail.com",
+    href: "mailto:alinandreibarbuceanu@gmail.com",
   },
   {
     title: "LinkedIn",
