@@ -1,0 +1,47 @@
+.commit-item {
+  padding: 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.commit-item:hover {
+  border-color: var(--accent-color);
+}
+
+.commit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.commit-repo {
+  padding: 4px 8px;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.commit-date {
+  color: var(--muted-text);
+  font-size: 0.85rem;
+}
+
+.commit-message {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .commit-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

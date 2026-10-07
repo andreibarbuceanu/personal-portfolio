@@ -1,5 +1,7 @@
 import { useState } from "react";
 import projects, { type Project } from "../../data/projects";
+import ProjectCard from "../projects/ProjectCard";
+import ButtonLink from "../ui/ButtonLink";
 import Modal from "../ui/Modal";
 import SectionHeader from "../ui/SectionHeader";
 import TechBadge from "../ui/TechBadge";
@@ -21,38 +23,11 @@ function Projects() {
 
       <div className="projects-grid">
         {projects.map((project) => (
-          <article
+          <ProjectCard
             key={project.title}
-            className="project-card"
-            role="button"
-            tabIndex={0}
-            onClick={() => setSelected(project)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                setSelected(project);
-              }
-            }}
-          >
-            <div className="project-body">
-              <h3>{project.title}</h3>
-
-              <p>{project.shortDescription}</p>
-
-              {project.technologies.length > 0 && (
-                <div className="tech-list">
-                  {project.technologies.map((technology) => (
-                    <TechBadge
-                      key={`${project.title}-${technology}`}
-                      label={technology}
-                    />
-                  ))}
-                </div>
-              )}
-
-              <span className="project-cta">View Project</span>
-            </div>
-          </article>
+            project={project}
+            onSelect={setSelected}
+          />
         ))}
       </div>
 
@@ -75,14 +50,13 @@ function Projects() {
           title={selected.title}
           actions={
             selected.url && selected.url !== "#" ? (
-              <a
+              <ButtonLink
                 href={selected.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-repository-button"
+                external
+                size="small"
               >
                 View Repository
-              </a>
+              </ButtonLink>
             ) : (
               <p className="repository-unavailable">
                 Repository not available publicly.

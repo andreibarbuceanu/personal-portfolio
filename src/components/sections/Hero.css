@@ -49,18 +49,3 @@
   color: var(--muted-text);
   line-height: 1.6;
 }
-
-.cta-button {
-  display: inline-block;
-  padding: 12px 20px;
-  background: var(--button-bg);
-  color: var(--button-color);
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.cta-button:hover {
-  opacity: 0.85;
-}

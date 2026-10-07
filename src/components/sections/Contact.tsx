@@ -1,5 +1,31 @@
-import './Contact.css';
+import ContactCard from "../contact/ContactCard";
 import SectionHeader from "../ui/SectionHeader";
+import "./Contact.css";
+
+const contactItems = [
+  {
+    title: "Phone",
+    description: "+40 771 642 396",
+    href: "tel:+40771642396",
+  },
+  {
+    title: "Email",
+    description: "andrei_barbuceanu@yahoo.com",
+    href: "mailto:andrei_barbuceanu@yahoo.com",
+  },
+  {
+    title: "LinkedIn",
+    description: "Alin Andrei Barbuceanu",
+    href: "https://www.linkedin.com/in/alin-andrei-barbuceanu-96a473388/",
+    external: true,
+  },
+  {
+    title: "GitHub",
+    description: "Projects and source code",
+    href: "https://github.com/andreibarbuceanu",
+    external: true,
+  },
+];
 
 function Contact() {
   return (
@@ -11,38 +37,9 @@ function Contact() {
       />
 
       <div className="contact-grid">
-        <a href="tel:+40771642396" className="contact-card">
-          <strong>Phone</strong>
-          <span className="contact-desc">+40 771 642 396</span>
-        </a>
-
-        <a
-          href="mailto:andrei_barbuceanu@yahoo.com"
-          className="contact-card"
-        >
-          <strong>Email</strong>
-          <span className="contact-desc">andrei_barbuceanu@yahoo.com</span>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/alin-andrei-barbuceanu-96a473388/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-card"
-        >
-          <strong>LinkedIn</strong>
-          <span className="contact-desc">Alin Andrei Barbuceanu</span>
-        </a>
-
-        <a
-          href="https://github.com/andreibarbuceanu"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-card"
-        >
-          <strong>GitHub</strong>
-          <span className="contact-desc">Projects and source code</span>
-        </a>
+        {contactItems.map((item) => (
+          <ContactCard key={item.title} {...item} />
+        ))}
       </div>
     </section>
   );

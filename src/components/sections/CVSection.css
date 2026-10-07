@@ -13,49 +13,6 @@
   margin-bottom: calc(var(--section-gap) / 2);
 }
 
-.achievement-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 520px;
-  height: 280px;
-  padding: 28px;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.achievement-card:hover,
-.achievement-card:focus-visible {
-  border-color: var(--accent-color);
-  outline: none;
-  transform: translateY(-4px);
-}
-
-.achievement-category {
-  color: var(--accent-color);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.achievement-card h3 {
-  margin: 12px 0;
-  color: var(--text-color);
-}
-
-.achievement-card p {
-  color: var(--muted-text);
-  line-height: 1.6;
-}
-
-.achievement-card small {
-  margin-top: auto;
-  color: var(--text-color);
-}
-
 .carousel-button {
   width: 42px;
   height: 42px;
@@ -94,23 +51,6 @@
   background-color: var(--accent-color);
 }
 
-.cv-download-button {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 12px 20px;
-  background: var(--button-bg);
-  color: var(--button-color);
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.cv-download-button:hover {
-  opacity: 0.85;
-}
-
 @media (max-width: 700px) {
   .carousel-container {
     gap: 10px;
@@ -122,7 +62,4 @@
     font-size: 1.6rem;
   }
 
-  .achievement-card {
-    padding: 22px;
-  }
 }

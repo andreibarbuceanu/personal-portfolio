@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import CommitItem from "../github/CommitItem";
+import ButtonLink from "../ui/ButtonLink";
 import SectionHeader from "../ui/SectionHeader";
 import "./GitHubCommits.css";
 
@@ -133,14 +135,13 @@ function GitHubCommits() {
         title="Recent GitHub Activity"
         description="A snapshot of my latest work across public repositories."
       >
-        <a
+        <ButtonLink
           href={GITHUB_PROFILE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-profile-btn"
+          external
+          size="small"
         >
           View GitHub Profile
-        </a>
+        </ButtonLink>
       </SectionHeader>
 
       {showingCached && (
@@ -159,18 +160,12 @@ function GitHubCommits() {
       {!loading && !error && commits.length > 0 && (
         <div className="commits-list">
           {commits.map((commit, index) => (
-            <div
+            <CommitItem
               key={`${commit.repo}-${commit.date}-${index}`}
-              className="commit-item"
-            >
-              <div className="commit-header">
-                <span className="commit-repo">{commit.repo}</span>
-                <span className="commit-date">
-                  {new Date(commit.date).toLocaleDateString()}
-                </span>
-              </div>
-              <p className="commit-message">{commit.message}</p>
-            </div>
+              repo={commit.repo}
+              message={commit.message}
+              date={commit.date}
+            />
           ))}
         </div>
       )}

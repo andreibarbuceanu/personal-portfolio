@@ -11,34 +11,3 @@
   justify-content: center;
   gap: 16px;
 }
-
-.contact-card {
-  flex: 1 1 220px;
-  max-width: 340px;
-  padding: 18px;
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.contact-card:hover,
-.contact-card:focus-visible {
-  border-color: var(--accent-color);
-  outline: none;
-  transform: translateY(-4px);
-}
-
-.contact-card strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.05rem;
-}
-
-.contact-desc {
-  color: var(--muted-text);
-  font-size: 0.95rem;
-}

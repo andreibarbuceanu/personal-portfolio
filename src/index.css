@@ -84,7 +84,7 @@ select {
 .layout-editorial .hero-tagline,
 .layout-editorial .hero-content h1,
 .layout-editorial .hero-description,
-.layout-editorial .cta-button {
+.layout-editorial .hero-content .button-link {
   grid-column: 1;
   justify-self: start;
 }

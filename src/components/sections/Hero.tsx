@@ -1,4 +1,5 @@
 import "./Hero.css";
+import ButtonLink from "../ui/ButtonLink";
 
 const profileImage = new URL("../../assets/IMG_6089.JPG", import.meta.url).href;
 
@@ -27,9 +28,9 @@ function Hero() {
           improving my skills through hands-on work.
         </p>
 
-        <a href="#projects" className="cta-button">
+        <ButtonLink href="#projects">
           Explore Projects
-        </a>
+        </ButtonLink>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { achievements, type Achievement } from "../../data/achievements";
+import AchievementCard from "../achievements/AchievementCard";
+import ButtonLink from "../ui/ButtonLink";
 import Modal from "../ui/Modal";
 import SectionHeader from "../ui/SectionHeader";
 import "./CVSection.css";
@@ -59,28 +61,10 @@ function CVSection() {
           ‹
         </button>
 
-        <div
-          className="achievement-card"
-          role="button"
-          tabIndex={0}
-          onClick={() => setSelectedAchievement(achievements[currentIndex])}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              setSelectedAchievement(achievements[currentIndex]);
-            }
-          }}
-        >
-          <span className="achievement-category">
-            {achievements[currentIndex].category}
-          </span>
-
-          <h3>{achievements[currentIndex].title}</h3>
-
-          <p>{achievements[currentIndex].shortDescription}</p>
-
-          <small>{achievements[currentIndex].year}</small>
-        </div>
+        <AchievementCard
+          achievement={achievements[currentIndex]}
+          onSelect={setSelectedAchievement}
+        />
 
         <button
           type="button"
@@ -104,13 +88,13 @@ function CVSection() {
         ))}
       </div>
 
-      <a
+      <ButtonLink
         href={`${import.meta.env.BASE_URL}cv/Andrei_Barbuceanu_CV.pdf`}
         download
-        className="cv-download-button"
+        centered
       >
         Download CV
-      </a>
+      </ButtonLink>
 
       {selectedAchievement && (
         <Modal
