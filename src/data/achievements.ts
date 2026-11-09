@@ -9,6 +9,26 @@ export interface Achievement {
 
 export const achievements: Achievement[] = [
   {
+    id: 10,
+    title: "ITFest x Innovation Labs Hackathon",
+    shortDescription:
+      "Built AfterCheck, a prototype for verifying fixes after a software release.",
+    fullDescription:
+      "I worked on AfterCheck, a prototype that combines automated Playwright browser checks with changes in customer-reported tickets to help teams see whether a fix resolved the original issue.",
+    year: "2026",
+    category: "Hackathon",
+  },
+  {
+    id: 11,
+    title: "NEXXT AI Summit Hackathon",
+    shortDescription:
+      "Built Dosar Verificat for Raiffeisen Bank’s challenge as part of a six-person team.",
+    fullDescription:
+      "Our team built a prototype in 24 hours that extracts information from sample SME credit documents, compares it with simulated registry records and highlights discrepancies with supporting evidence for analyst review.",
+    year: "2026",
+    category: "Hackathon",
+  },
+  {
     id: 1,
     title: "Electronics and Telecommunications Engineering",
     shortDescription:
