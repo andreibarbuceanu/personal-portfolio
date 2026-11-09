@@ -9,26 +9,6 @@ export interface Achievement {
 
 export const achievements: Achievement[] = [
   {
-    id: 10,
-    title: "ITFest x Innovation Labs Hackathon",
-    shortDescription:
-      "Built AfterCheck, a prototype for verifying fixes after a software release.",
-    fullDescription:
-      "I worked on AfterCheck, a prototype that combines automated Playwright browser checks with changes in customer-reported tickets to help teams see whether a fix resolved the original issue.",
-    year: "2026",
-    category: "Hackathon",
-  },
-  {
-    id: 11,
-    title: "NEXXT AI Summit Hackathon",
-    shortDescription:
-      "Built Dosar Verificat for Raiffeisen Bank’s challenge as part of a six-person team.",
-    fullDescription:
-      "Our team built a prototype in 24 hours that extracts information from sample SME credit documents, compares it with simulated registry records and highlights discrepancies with supporting evidence for analyst review.",
-    year: "2026",
-    category: "Hackathon",
-  },
-  {
     id: 1,
     title: "Electronics and Telecommunications Engineering",
     shortDescription:
@@ -97,6 +77,26 @@ export const achievements: Achievement[] = [
      "The VOIS Summer School of Software Engineering provided hands-on exposure to several areas of modern software development, including Python, frontend development, cloud technologies, DevOps, software testing, artificial intelligence and cybersecurity. Alongside the technical workshops, I worked as part of a team on SetItUp, a collaborative React Native application developed using Agile practices and rotating responsibilities across development, testing, design and other project roles. The program helped me better understand how different technologies and disciplines connect throughout the software development lifecycle and how software teams collaborate on real-world projects.",
    year: "2026",
    category: "Training",
+  },
+  {
+    id: 10,
+    title: "ITFest x Innovation Labs Hackathon",
+    shortDescription:
+      "Built AfterCheck, a prototype for verifying fixes after a software release.",
+    fullDescription:
+      "I worked on AfterCheck, a prototype that combines automated Playwright browser checks with changes in customer-reported tickets to help teams see whether a fix resolved the original issue.",
+    year: "2026",
+    category: "Hackathon",
+  },
+  {
+    id: 11,
+    title: "NEXXT AI Summit Hackathon",
+    shortDescription:
+      "Built Dosar Verificat for Raiffeisen Bank’s challenge as part of a six-person team.",
+    fullDescription:
+      "Our team built a prototype in 24 hours that extracts information from sample SME credit documents, compares it with simulated registry records and highlights discrepancies with supporting evidence for analyst review.",
+    year: "2026",
+    category: "Hackathon",
   },
   {
     id: 8,
