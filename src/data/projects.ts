@@ -8,6 +8,24 @@ export type Project = {
 
 const projects: Project[] = [
   {
+    title: "AfterCheck",
+    shortDescription:
+      "A post-release verification prototype built at the ITFest x Innovation Labs hackathon.",
+    fullDescription:
+      "AfterCheck combines automated Playwright browser checks with changes in customer-reported tickets after a release. Its dashboard helps product teams distinguish fixes that reduced reported issues from those that need further monitoring.",
+    url: "https://github.com/andreibarbuceanu/AfterCheck",
+    technologies: ["React", "TypeScript", "FastAPI", "SQLite", "Playwright", "Gemini"],
+  },
+  {
+    title: "Dosar Verificat",
+    shortDescription:
+      "An SME credit-file verification prototype built for Raiffeisen Bank’s challenge at the NEXXT AI Summit hackathon.",
+    fullDescription:
+      "Built by a six-person team in 24 hours, the prototype classifies synthetic credit-file PDFs, extracts fields with source references and compares them with simulated registry records. It surfaces discrepancies and supporting evidence for an analyst to review.",
+    url: "https://github.com/andreibarbuceanu/dosar-verificat",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PyMuPDF"],
+  },
+  {
     title: "SetItUp – Social Networking Mobile App",
     shortDescription:
       "A collaborative social networking application built with React Native and Firebase during the VOIS Summer School of Engineering.",
